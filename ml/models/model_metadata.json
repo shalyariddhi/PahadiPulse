@@ -1,0 +1,122 @@
+{
+  "modelName": "PahadiPulse Regional Pressure Predictor",
+  "algorithm": "GradientBoostingRegressor",
+  "trainedAt": "2026-09-14T17:33:54.231071+00:00",
+  "isSyntheticData": true,
+  "dataSource": "SYNTHETIC_DEVELOPMENT_DATASET",
+  "disclaimer": "Trained on synthetic Himalayan regional tourism pressure data for IBM Hackathon demonstration. Do not use as certified real-world meteorological/civil emergency forecast without ground-truth calibration.",
+  "metrics": {
+    "baseline": {
+      "algorithm": "Ridge",
+      "r2Score": 0.9833,
+      "mae": 1.9953,
+      "rmse": 2.4871
+    },
+    "finalModel": {
+      "algorithm": "GradientBoostingRegressor",
+      "r2Score": 0.9885,
+      "mae": 1.6706,
+      "rmse": 2.0631
+    }
+  },
+  "featureImportances": [
+    {
+      "feature": "current_pressure",
+      "importance": 0.7747
+    },
+    {
+      "feature": "lag_pressure_7d_avg",
+      "importance": 0.117
+    },
+    {
+      "feature": "waste_score",
+      "importance": 0.0475
+    },
+    {
+      "feature": "sin_day_of_week",
+      "importance": 0.0269
+    },
+    {
+      "feature": "day_of_week",
+      "importance": 0.0146
+    },
+    {
+      "feature": "cos_day_of_week",
+      "importance": 0.0123
+    },
+    {
+      "feature": "water_score",
+      "importance": 0.0052
+    },
+    {
+      "feature": "tourism_score",
+      "importance": 0.0005
+    },
+    {
+      "feature": "traffic_score",
+      "importance": 0.0004
+    },
+    {
+      "feature": "lag_pressure_1d",
+      "importance": 0.0003
+    },
+    {
+      "feature": "tourist_volume",
+      "importance": 0.0002
+    },
+    {
+      "feature": "environment_score",
+      "importance": 0.0002
+    },
+    {
+      "feature": "rolling_mean_3d",
+      "importance": 0.0002
+    },
+    {
+      "feature": "capacity",
+      "importance": 0.0
+    },
+    {
+      "feature": "is_weekend",
+      "importance": 0.0
+    },
+    {
+      "feature": "month",
+      "importance": 0.0
+    },
+    {
+      "feature": "season_code",
+      "importance": 0.0
+    },
+    {
+      "feature": "sin_month",
+      "importance": 0.0
+    },
+    {
+      "feature": "cos_month",
+      "importance": 0.0
+    }
+  ],
+  "totalFeatures": 19,
+  "featureNames": [
+    "tourist_volume",
+    "capacity",
+    "tourism_score",
+    "water_score",
+    "waste_score",
+    "traffic_score",
+    "environment_score",
+    "day_of_week",
+    "is_weekend",
+    "month",
+    "season_code",
+    "current_pressure",
+    "lag_pressure_1d",
+    "lag_pressure_7d_avg",
+    "rolling_mean_3d",
+    "sin_day_of_week",
+    "cos_day_of_week",
+    "sin_month",
+    "cos_month"
+  ]
+}

@@ -1,0 +1,39 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isImageBelowLimit() {
+      return request.resource.size < 10 * 1024 * 1024 // 10MB limit
+          && request.resource.contentType.matches('image/.*');
+    }
+
+    // Citizen report proof photos
+    match /reports/{reportId}/{fileName} {
+      // Anyone can view report proof photos
+      allow read: if true;
+      // Authenticated users can upload photo proofs with image validation and size limit
+      allow write: if isAuthenticated() && isImageBelowLimit();
+    }
+
+    // Destination & provider banner images
+    match /destinations/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAuthenticated() && request.auth.token.role == 'admin';
+    }
+
+    match /providers/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAuthenticated();
+    }
+
+    // User profile avatars
+    match /users/{userId}/{fileName} {
+      allow read: if true;
+      allow write: if isAuthenticated() && request.auth.uid == userId && isImageBelowLimit();
+    }
+  }
+}

@@ -1,0 +1,954 @@
+[
+  {
+    "bestSeasons": [
+      "March-June",
+      "September-November"
+    ],
+    "environmentScore": 24.0,
+    "capacityDailyTourists": 8000,
+    "id": "almora",
+    "imageUrl": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 3400,
+    "longitude": 79.6591,
+    "description": "Cultural heart of Kumaon famous for Bal Mithai, heritage copperware, and centuries-old stone lanes.",
+    "isDemo": true,
+    "pressureScore": 40.0,
+    "latitude": 29.5971,
+    "avgDailyBudgetINR": 2400,
+    "altitudeMeters": 1638,
+    "district": "Almora",
+    "updatedAt": "2026-09-14T17:29:34.949188+00:00",
+    "waterScore": 46.0,
+    "wasteScore": 38.0,
+    "popularSpots": [
+      "Kasai Devi Temple",
+      "Bright End Corner",
+      "Chitai Golu Devta"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Culture",
+      "Food",
+      "Spiritual",
+      "Heritage"
+    ],
+    "capacity": 8000,
+    "tourismScore": 42.0,
+    "subScores": {
+      "waste": 38.0,
+      "water": 46.0,
+      "environment": 24.0,
+      "tourism": 42.0,
+      "traffic": 39.0
+    },
+    "trafficScore": 39.0,
+    "status": "MODERATE",
+    "name": "Almora"
+  },
+  {
+    "bestSeasons": [
+      "December-March (Skiing)",
+      "May-October"
+    ],
+    "environmentScore": 40.0,
+    "capacityDailyTourists": 6000,
+    "id": "auli",
+    "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 3200,
+    "longitude": 79.567,
+    "description": "Premier skiing destination surrounded by coniferous and oak forests, accessed via ropeway from Joshimath.",
+    "isDemo": true,
+    "pressureScore": 44.8,
+    "latitude": 30.5284,
+    "avgDailyBudgetINR": 4200,
+    "altitudeMeters": 2800,
+    "district": "Chamoli",
+    "updatedAt": "2026-09-14T17:29:34.402895+00:00",
+    "waterScore": 42.0,
+    "wasteScore": 38.0,
+    "popularSpots": [
+      "Auli Ropeway",
+      "Gorson Bugyal Trek",
+      "Artificial Lake"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Adventure",
+      "Nature",
+      "Photography"
+    ],
+    "capacity": 6000,
+    "tourismScore": 48.0,
+    "subScores": {
+      "waste": 38.0,
+      "water": 42.0,
+      "environment": 40.0,
+      "tourism": 48.0,
+      "traffic": 55.0
+    },
+    "trafficScore": 55.0,
+    "status": "MODERATE",
+    "name": "Auli"
+  },
+  {
+    "bestSeasons": [
+      "October-March",
+      "April-June"
+    ],
+    "environmentScore": 18.0,
+    "capacityDailyTourists": 2500,
+    "id": "binsar",
+    "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 480,
+    "longitude": 79.7497,
+    "description": "Wilderness sanctuary offering panoramic 300km vistas of Trishul, Nanda Devi, and Panchachuli peaks.",
+    "isDemo": true,
+    "pressureScore": 15.5,
+    "latitude": 29.7042,
+    "avgDailyBudgetINR": 2500,
+    "altitudeMeters": 2420,
+    "district": "Almora",
+    "updatedAt": "2026-09-14T17:29:35.074063+00:00",
+    "waterScore": 20.0,
+    "wasteScore": 12.0,
+    "popularSpots": [
+      "Zero Point",
+      "Binsar Wildlife Sanctuary",
+      "Mary Budden Estate Trail"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Nature",
+      "Photography",
+      "Relaxation"
+    ],
+    "capacity": 2500,
+    "tourismScore": 16.0,
+    "subScores": {
+      "waste": 12.0,
+      "water": 20.0,
+      "environment": 18.0,
+      "tourism": 16.0,
+      "traffic": 10.0
+    },
+    "trafficScore": 10.0,
+    "status": "LOW",
+    "name": "Binsar"
+  },
+  {
+    "bestSeasons": [
+      "March-June",
+      "October-February"
+    ],
+    "environmentScore": 22.0,
+    "capacityDailyTourists": 4500,
+    "id": "chakrata",
+    "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 1100,
+    "longitude": 77.8681,
+    "description": "Secluded cantonment town offering Tiger Falls and the high coniferous ridges of Deoban.",
+    "isDemo": true,
+    "pressureScore": 20.6,
+    "latitude": 30.7042,
+    "avgDailyBudgetINR": 2100,
+    "altitudeMeters": 2118,
+    "district": "Dehradun",
+    "updatedAt": "2026-09-14T17:29:35.326823+00:00",
+    "waterScore": 24.0,
+    "wasteScore": 18.0,
+    "popularSpots": [
+      "Tiger Falls",
+      "Deoban Forest",
+      "Chilmiri Neck",
+      "Budher Caves"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Nature",
+      "Adventure",
+      "Culture",
+      "Relaxation"
+    ],
+    "capacity": 4500,
+    "tourismScore": 22.0,
+    "subScores": {
+      "waste": 18.0,
+      "water": 24.0,
+      "environment": 22.0,
+      "tourism": 22.0,
+      "traffic": 15.0
+    },
+    "trafficScore": 15.0,
+    "status": "LOW",
+    "name": "Chakrata"
+  },
+  {
+    "bestSeasons": [
+      "April-November",
+      "December-February (Snow)"
+    ],
+    "environmentScore": 30.0,
+    "capacityDailyTourists": 3500,
+    "id": "chopta",
+    "imageUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 850,
+    "longitude": 79.1764,
+    "description": "Mini Switzerland of Uttarakhand. Base camp for the sacred Tungnath and Chandrashila treks with pristine alpine meadows.",
+    "isDemo": true,
+    "pressureScore": 23.3,
+    "latitude": 30.4878,
+    "avgDailyBudgetINR": 2000,
+    "altitudeMeters": 2680,
+    "district": "Rudraprayag",
+    "updatedAt": "2026-09-14T17:38:25.278349+00:00Z",
+    "waterScore": 28.0,
+    "wasteScore": 20.0,
+    "popularSpots": [
+      "Tungnath Temple",
+      "Chandrashila Summit",
+      "Deoria Tal Trek"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Nature",
+      "Adventure",
+      "Spiritual",
+      "Photography"
+    ],
+    "capacity": 3500,
+    "tourismScore": 24.0,
+    "trafficScore": 14.0,
+    "subScores": {
+      "tourism": 24.0,
+      "water": 28.0,
+      "waste": 20.0,
+      "traffic": 14.0,
+      "environment": 30.0
+    },
+    "status": "LOW",
+    "name": "Chopta"
+  },
+  {
+    "bestSeasons": [
+      "September-May"
+    ],
+    "environmentScore": 35.0,
+    "capacityDailyTourists": 5000,
+    "id": "devprayag",
+    "imageUrl": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 1500,
+    "longitude": 78.5989,
+    "description": "Holy confluence of Alaknanda and Bhagirathi rivers forming the sacred Ganga river.",
+    "isDemo": true,
+    "pressureScore": 27.2,
+    "latitude": 30.1458,
+    "avgDailyBudgetINR": 1800,
+    "altitudeMeters": 830,
+    "district": "Tehri Garhwal",
+    "updatedAt": "2026-09-14T17:29:35.825411+00:00",
+    "waterScore": 22.0,
+    "wasteScore": 25.0,
+    "popularSpots": [
+      "Sangam Confluence Ghat",
+      "Raghunathji Temple",
+      "Suspension Bridge"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Spiritual",
+      "Culture",
+      "Photography"
+    ],
+    "capacity": 5000,
+    "tourismScore": 28.0,
+    "subScores": {
+      "waste": 25.0,
+      "water": 22.0,
+      "environment": 35.0,
+      "tourism": 28.0,
+      "traffic": 32.0
+    },
+    "trafficScore": 32.0,
+    "status": "LOW",
+    "name": "Devprayag"
+  },
+  {
+    "bestSeasons": [
+      "March-June",
+      "September-January"
+    ],
+    "environmentScore": 25.0,
+    "capacityDailyTourists": 5000,
+    "id": "dhanaulti",
+    "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 1400,
+    "longitude": 78.2333,
+    "description": "Quiet deodar sanctuary with eco-parks managed by local forest cooperatives. Ideal low-stress alternative to Mussoorie.",
+    "isDemo": true,
+    "pressureScore": 25.8,
+    "latitude": 30.45,
+    "avgDailyBudgetINR": 2400,
+    "altitudeMeters": 2286,
+    "district": "Tehri Garhwal",
+    "updatedAt": "2026-09-14T17:29:33.777966+00:00",
+    "waterScore": 30.0,
+    "wasteScore": 22.0,
+    "popularSpots": [
+      "Amber Eco Park",
+      "Dhara Eco Park",
+      "Potato Farm Viewpoint"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Nature",
+      "Relaxation",
+      "Photography"
+    ],
+    "capacity": 5000,
+    "tourismScore": 28.0,
+    "subScores": {
+      "waste": 22.0,
+      "water": 30.0,
+      "environment": 25.0,
+      "tourism": 28.0,
+      "traffic": 20.0
+    },
+    "trafficScore": 20.0,
+    "status": "LOW",
+    "name": "Dhanaulti"
+  },
+  {
+    "bestSeasons": [
+      "April-June",
+      "September-October"
+    ],
+    "environmentScore": 25.0,
+    "capacityDailyTourists": 3500,
+    "id": "harsil",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 720,
+    "longitude": 78.7397,
+    "description": "Charming apple valley on the banks of the Bhagirathi river, offering untouched cedar woods and wooden houses.",
+    "isDemo": true,
+    "pressureScore": 17.2,
+    "latitude": 31.0378,
+    "avgDailyBudgetINR": 2300,
+    "altitudeMeters": 2620,
+    "district": "Uttarkashi",
+    "updatedAt": "2026-09-14T17:29:35.455117+00:00",
+    "waterScore": 16.0,
+    "wasteScore": 14.0,
+    "popularSpots": [
+      "Bagori Village",
+      "Dharali Apple Orchards",
+      "Saat Tal Trek"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Nature",
+      "Relaxation",
+      "Photography",
+      "Culture"
+    ],
+    "capacity": 3500,
+    "tourismScore": 19.0,
+    "subScores": {
+      "waste": 14.0,
+      "water": 16.0,
+      "environment": 25.0,
+      "tourism": 19.0,
+      "traffic": 15.0
+    },
+    "trafficScore": 15.0,
+    "status": "LOW",
+    "name": "Harsil"
+  },
+  {
+    "bestSeasons": [
+      "All Year"
+    ],
+    "environmentScore": 20.0,
+    "capacityDailyTourists": 4000,
+    "id": "kanatal",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 950,
+    "longitude": 78.3341,
+    "description": "Pristine mountain ridge wrapped in dense deodar and pine forests. Low infrastructure strain and authentic village stays.",
+    "isDemo": true,
+    "pressureScore": 18.4,
+    "latitude": 30.4123,
+    "avgDailyBudgetINR": 2200,
+    "altitudeMeters": 2590,
+    "district": "Tehri Garhwal",
+    "updatedAt": "2026-09-14T17:29:33.911512+00:00",
+    "waterScore": 25.0,
+    "wasteScore": 15.0,
+    "popularSpots": [
+      "Surkanda Devi Temple",
+      "Kodia Jungle",
+      "Tehri Viewpoint"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Nature",
+      "Adventure",
+      "Relaxation",
+      "Photography"
+    ],
+    "capacity": 4000,
+    "tourismScore": 18.0,
+    "subScores": {
+      "waste": 15.0,
+      "water": 25.0,
+      "environment": 20.0,
+      "tourism": 18.0,
+      "traffic": 12.0
+    },
+    "trafficScore": 12.0,
+    "status": "LOW",
+    "name": "Kanatal"
+  },
+  {
+    "bestSeasons": [
+      "April-June",
+      "September-November"
+    ],
+    "environmentScore": 18.0,
+    "capacityDailyTourists": 4000,
+    "id": "kausani",
+    "imageUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 900,
+    "longitude": 79.5967,
+    "description": "Known as the Switzerland of India for its uninterrupted 300km Himalayan panoramas and organic tea gardens.",
+    "isDemo": true,
+    "pressureScore": 18.6,
+    "latitude": 29.8543,
+    "avgDailyBudgetINR": 2200,
+    "altitudeMeters": 1890,
+    "district": "Bageshwar",
+    "updatedAt": "2026-09-14T17:29:35.708438+00:00",
+    "waterScore": 22.0,
+    "wasteScore": 16.0,
+    "popularSpots": [
+      "Anasakti Ashram",
+      "Kausani Tea Estate",
+      "Rudradhari Falls"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Nature",
+      "Culture",
+      "Relaxation",
+      "Photography"
+    ],
+    "capacity": 4000,
+    "tourismScore": 20.0,
+    "subScores": {
+      "waste": 16.0,
+      "water": 22.0,
+      "environment": 18.0,
+      "tourism": 20.0,
+      "traffic": 14.0
+    },
+    "trafficScore": 14.0,
+    "status": "LOW",
+    "name": "Kausani"
+  },
+  {
+    "bestSeasons": [
+      "All Year"
+    ],
+    "environmentScore": 20.0,
+    "capacityDailyTourists": 6000,
+    "id": "lansdowne",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 2100,
+    "longitude": 78.6872,
+    "description": "Clean, orderly cantonment hill station surrounded by blue pine and oak forests.",
+    "isDemo": true,
+    "pressureScore": 31.4,
+    "latitude": 29.8377,
+    "avgDailyBudgetINR": 2600,
+    "altitudeMeters": 1706,
+    "district": "Pauri Garhwal",
+    "updatedAt": "2026-09-14T17:29:34.700794+00:00",
+    "waterScore": 38.0,
+    "wasteScore": 26.0,
+    "popularSpots": [
+      "Bhulla Lake",
+      "Tip N Top Viewpoint",
+      "St. John's Church"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Nature",
+      "Culture",
+      "Relaxation"
+    ],
+    "capacity": 6000,
+    "tourismScore": 35.0,
+    "subScores": {
+      "waste": 26.0,
+      "water": 38.0,
+      "environment": 20.0,
+      "tourism": 35.0,
+      "traffic": 28.0
+    },
+    "trafficScore": 28.0,
+    "status": "MODERATE",
+    "name": "Lansdowne"
+  },
+  {
+    "bestSeasons": [
+      "March-June",
+      "October-February"
+    ],
+    "environmentScore": 25.0,
+    "capacityDailyTourists": 5000,
+    "id": "mukteshwar",
+    "imageUrl": "https://images.unsplash.com/photo-1434725039720-aaad6dd32dfe?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 1600,
+    "longitude": 79.6478,
+    "description": "Panoramic Himalayan views, apple and apricot orchards, and quiet village trails.",
+    "isDemo": true,
+    "pressureScore": 29.2,
+    "latitude": 29.4722,
+    "avgDailyBudgetINR": 2700,
+    "altitudeMeters": 2171,
+    "district": "Nainital",
+    "updatedAt": "2026-09-14T17:29:34.280146+00:00",
+    "waterScore": 36.0,
+    "wasteScore": 24.0,
+    "popularSpots": [
+      "Chauli Ki Jali",
+      "Mukteshwar Dham",
+      "Bhaalu Gaad Waterfall"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Nature",
+      "Adventure",
+      "Photography",
+      "Food"
+    ],
+    "capacity": 5000,
+    "tourismScore": 32.0,
+    "subScores": {
+      "waste": 24.0,
+      "water": 36.0,
+      "environment": 25.0,
+      "tourism": 32.0,
+      "traffic": 22.0
+    },
+    "trafficScore": 22.0,
+    "status": "LOW",
+    "name": "Mukteshwar"
+  },
+  {
+    "bestSeasons": [
+      "March-June",
+      "September-November"
+    ],
+    "environmentScore": 28.0,
+    "capacityDailyTourists": 3000,
+    "id": "munsiyari",
+    "imageUrl": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 550,
+    "longitude": 80.2333,
+    "description": "Gateway to the Johar Valley and Milam Glacier, sitting directly facing the magnificent Panchachuli 5 peaks.",
+    "isDemo": true,
+    "pressureScore": 16.1,
+    "latitude": 30.0667,
+    "avgDailyBudgetINR": 2100,
+    "altitudeMeters": 2200,
+    "district": "Pithoragarh",
+    "updatedAt": "2026-09-14T17:29:35.578492+00:00",
+    "waterScore": 18.0,
+    "wasteScore": 14.0,
+    "popularSpots": [
+      "Panchachuli Viewpoint",
+      "Birthi Falls",
+      "Khaliya Top Trek"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Adventure",
+      "Nature",
+      "Culture",
+      "Photography"
+    ],
+    "capacity": 3000,
+    "tourismScore": 15.0,
+    "subScores": {
+      "waste": 14.0,
+      "water": 18.0,
+      "environment": 28.0,
+      "tourism": 15.0,
+      "traffic": 10.0
+    },
+    "trafficScore": 10.0,
+    "status": "LOW",
+    "name": "Munsiyari"
+  },
+  {
+    "bestSeasons": [
+      "March-June",
+      "September-November"
+    ],
+    "environmentScore": 45.0,
+    "capacityDailyTourists": 15000,
+    "id": "mussoorie",
+    "imageUrl": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 22400,
+    "longitude": 78.0644,
+    "description": "Queen of the Hills, experiencing acute weekend traffic bottlenecks on Mall Road and chronic water tanker demand.",
+    "isDemo": true,
+    "pressureScore": 80.4,
+    "latitude": 30.4598,
+    "avgDailyBudgetINR": 3800,
+    "altitudeMeters": 2005,
+    "district": "Dehradun",
+    "updatedAt": "2026-09-14T17:29:32.864732+00:00",
+    "waterScore": 82.0,
+    "wasteScore": 76.0,
+    "popularSpots": [
+      "Gun Hill",
+      "Kempty Falls",
+      "Camel's Back Road",
+      "Mall Road"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Nature",
+      "Colonial Heritage",
+      "Photography",
+      "Food"
+    ],
+    "capacity": 15000,
+    "tourismScore": 88.0,
+    "subScores": {
+      "waste": 76.0,
+      "water": 82.0,
+      "environment": 45.0,
+      "tourism": 88.0,
+      "traffic": 92.0
+    },
+    "trafficScore": 92.0,
+    "status": "CRITICAL",
+    "name": "Mussoorie"
+  },
+  {
+    "bestSeasons": [
+      "March-June",
+      "October-December"
+    ],
+    "environmentScore": 48.0,
+    "capacityDailyTourists": 18000,
+    "id": "nainital",
+    "imageUrl": "https://images.unsplash.com/photo-1610444583713-2615a1f6a1d4?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 24500,
+    "longitude": 79.4542,
+    "description": "Famous Kumaon lake city under peak tourist pressure with severe parking shortages along Mallital and Tallital.",
+    "isDemo": true,
+    "pressureScore": 78.1,
+    "latitude": 29.3919,
+    "avgDailyBudgetINR": 3600,
+    "altitudeMeters": 2084,
+    "district": "Nainital",
+    "updatedAt": "2026-09-14T17:29:34.159626+00:00",
+    "waterScore": 79.0,
+    "wasteScore": 72.0,
+    "popularSpots": [
+      "Naini Lake",
+      "Naina Peak",
+      "Snow View Point",
+      "Tiffin Top"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Nature",
+      "Boating",
+      "Photography",
+      "Relaxation"
+    ],
+    "capacity": 18000,
+    "tourismScore": 86.0,
+    "subScores": {
+      "waste": 72.0,
+      "water": 79.0,
+      "environment": 48.0,
+      "tourism": 86.0,
+      "traffic": 89.0
+    },
+    "trafficScore": 89.0,
+    "status": "CRITICAL",
+    "name": "Nainital"
+  },
+  {
+    "bestSeasons": [
+      "October-May"
+    ],
+    "environmentScore": 20.0,
+    "capacityDailyTourists": 2000,
+    "id": "pangot",
+    "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 380,
+    "longitude": 79.4167,
+    "description": "Birdwatcher's paradise tucked 15km above Nainital in dense oak and rhododendron canopies.",
+    "pressureScore": 16.9,
+    "latitude": 29.4167,
+    "avgDailyBudgetINR": 2400,
+    "altitudeMeters": 1984,
+    "district": "Nainital",
+    "updatedAt": "2026-09-14T12:15:48.289049Z",
+    "waterScore": 22.0,
+    "wasteScore": 14.0,
+    "popularSpots": [
+      "Kilbury Bird Sanctuary",
+      "Gujjuroo Trail",
+      "Pangot Ridge"
+    ],
+    "tags": [
+      "Nature",
+      "Photography",
+      "Relaxation"
+    ],
+    "tourismScore": 16.0,
+    "subScores": {
+      "waste": 14.0,
+      "water": 22.0,
+      "environment": 20.0,
+      "tourism": 16.0,
+      "traffic": 12.0
+    },
+    "trafficScore": 12.0,
+    "status": "LOW",
+    "name": "Pangot"
+  },
+  {
+    "bestSeasons": [
+      "March-June",
+      "September-December"
+    ],
+    "environmentScore": 22.0,
+    "capacityDailyTourists": 5500,
+    "id": "pauri",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 1200,
+    "longitude": 78.78,
+    "description": "District headquarters sitting high on Kandoliya hill with sweeping views of the snow-clad Chaukhamba and Kedarnath peaks.",
+    "isDemo": true,
+    "pressureScore": 21.3,
+    "latitude": 30.15,
+    "avgDailyBudgetINR": 2100,
+    "altitudeMeters": 1814,
+    "district": "Pauri Garhwal",
+    "updatedAt": "2026-09-14T17:29:36.068511+00:00",
+    "waterScore": 26.0,
+    "wasteScore": 18.0,
+    "popularSpots": [
+      "Kandoliya Temple & Pine Park",
+      "Kyunkaleshwar Mahadev",
+      "Ransi Ground"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Nature",
+      "Culture",
+      "Relaxation",
+      "Photography"
+    ],
+    "capacity": 5500,
+    "tourismScore": 22.0,
+    "subScores": {
+      "waste": 18.0,
+      "water": 26.0,
+      "environment": 22.0,
+      "tourism": 22.0,
+      "traffic": 16.0
+    },
+    "trafficScore": 16.0,
+    "status": "LOW",
+    "name": "Pauri"
+  },
+  {
+    "bestSeasons": [
+      "March-June",
+      "September-November"
+    ],
+    "environmentScore": 18.0,
+    "capacityDailyTourists": 6000,
+    "id": "ranikhet",
+    "imageUrl": "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 1950,
+    "longitude": 79.4322,
+    "description": "Cantonment hill town with historic pine glades, golf courses, and quiet walking ridges.",
+    "isDemo": true,
+    "pressureScore": 26.1,
+    "latitude": 29.6434,
+    "avgDailyBudgetINR": 2500,
+    "altitudeMeters": 1869,
+    "district": "Almora",
+    "updatedAt": "2026-09-14T17:29:34.826228+00:00",
+    "waterScore": 32.0,
+    "wasteScore": 20.0,
+    "popularSpots": [
+      "Chaubatia Apple Gardens",
+      "Golf Course",
+      "Jhula Devi Temple"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Nature",
+      "Culture",
+      "Relaxation"
+    ],
+    "capacity": 6000,
+    "tourismScore": 30.0,
+    "subScores": {
+      "waste": 20.0,
+      "water": 32.0,
+      "environment": 18.0,
+      "tourism": 30.0,
+      "traffic": 22.0
+    },
+    "trafficScore": 22.0,
+    "status": "LOW",
+    "name": "Ranikhet"
+  },
+  {
+    "bestSeasons": [
+      "September-April"
+    ],
+    "environmentScore": 40.0,
+    "capacityDailyTourists": 25000,
+    "id": "rishikesh",
+    "imageUrl": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 31000,
+    "longitude": 78.2676,
+    "description": "Yoga capital of the world experiencing severe pilgrim and adventure traffic near Tapovan and Ram Jhula.",
+    "isDemo": true,
+    "pressureScore": 71.1,
+    "latitude": 30.0869,
+    "avgDailyBudgetINR": 2800,
+    "altitudeMeters": 372,
+    "district": "Dehradun",
+    "updatedAt": "2026-09-14T17:29:34.035074+00:00",
+    "waterScore": 62.0,
+    "wasteScore": 68.0,
+    "popularSpots": [
+      "Triveni Ghat",
+      "Ram Jhula",
+      "Laxman Jhula",
+      "Beatles Ashram"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Adventure",
+      "Spiritual",
+      "Culture",
+      "Food"
+    ],
+    "capacity": 25000,
+    "tourismScore": 84.0,
+    "subScores": {
+      "waste": 68.0,
+      "water": 62.0,
+      "environment": 40.0,
+      "tourism": 84.0,
+      "traffic": 85.0
+    },
+    "trafficScore": 85.0,
+    "status": "CRITICAL",
+    "name": "Rishikesh"
+  },
+  {
+    "bestSeasons": [
+      "All Year"
+    ],
+    "environmentScore": 22.0,
+    "capacityDailyTourists": 7000,
+    "id": "tehri",
+    "imageUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 2300,
+    "longitude": 78.48,
+    "description": "Emerald reservoir surrounded by high ridges, offering regulated water sports, floating cottages, and boating.",
+    "isDemo": true,
+    "pressureScore": 28.1,
+    "latitude": 30.38,
+    "avgDailyBudgetINR": 2900,
+    "altitudeMeters": 1750,
+    "district": "Tehri Garhwal",
+    "updatedAt": "2026-09-14T17:29:35.196518+00:00",
+    "waterScore": 28.0,
+    "wasteScore": 24.0,
+    "popularSpots": [
+      "Tehri Dam Viewpoint",
+      "Water Sports Complex",
+      "Floating Huts"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Adventure",
+      "Water Sports",
+      "Nature"
+    ],
+    "capacity": 7000,
+    "tourismScore": 34.0,
+    "subScores": {
+      "waste": 24.0,
+      "water": 28.0,
+      "environment": 22.0,
+      "tourism": 34.0,
+      "traffic": 26.0
+    },
+    "trafficScore": 26.0,
+    "status": "LOW",
+    "name": "Tehri Lake & New Tehri"
+  },
+  {
+    "bestSeasons": [
+      "March-June",
+      "September-November"
+    ],
+    "environmentScore": 38.0,
+    "capacityDailyTourists": 9000,
+    "id": "uttarkashi",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+    "currentVisitorsEst": 3800,
+    "longitude": 78.4354,
+    "description": "Major mountaineering center hosting NIM and gateway to Gangotri and high Himalayan passes.",
+    "isDemo": true,
+    "pressureScore": 40.0,
+    "latitude": 30.7268,
+    "avgDailyBudgetINR": 2200,
+    "altitudeMeters": 1158,
+    "district": "Uttarkashi",
+    "updatedAt": "2026-09-14T17:29:35.944572+00:00",
+    "waterScore": 38.0,
+    "wasteScore": 36.0,
+    "popularSpots": [
+      "Vishwanath Temple",
+      "Nehru Institute of Mountaineering",
+      "Maneri Dam"
+    ],
+    "dataSource": "DEMO_SYNTHETIC_HACKATHON",
+    "tags": [
+      "Adventure",
+      "Spiritual",
+      "Nature"
+    ],
+    "capacity": 9000,
+    "tourismScore": 44.0,
+    "subScores": {
+      "waste": 36.0,
+      "water": 38.0,
+      "environment": 38.0,
+      "tourism": 44.0,
+      "traffic": 42.0
+    },
+    "trafficScore": 42.0,
+    "status": "MODERATE",
+    "name": "Uttarkashi"
+  }
+]

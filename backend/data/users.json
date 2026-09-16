@@ -1,0 +1,122 @@
+[
+  {
+    "uid": "citizen_0969af28",
+    "isBlocked": false,
+    "id": "citizen_0969af28",
+    "updatedAt": "2026-09-14T17:20:20.837017+00:00Z",
+    "displayName": "Test Citizen",
+    "phoneNumber": null,
+    "createdAt": "2026-09-14T17:20:20.626382+00:00Z",
+    "email": "citizen_0969af28@pahadipulse.in",
+    "role": "admin",
+    "photoUrl": ""
+  },
+  {
+    "uid": "citizen_c77fc645",
+    "isBlocked": false,
+    "id": "citizen_c77fc645",
+    "updatedAt": "2026-09-14T17:21:01.323144+00:00Z",
+    "displayName": "Test Citizen",
+    "phoneNumber": null,
+    "createdAt": "2026-09-14T17:21:01.163386+00:00Z",
+    "email": "citizen_c77fc645@pahadipulse.in",
+    "role": "admin",
+    "photoUrl": ""
+  },
+  {
+    "uid": "test_citizen_user_01",
+    "isBlocked": false,
+    "id": "test_citizen_user_01",
+    "updatedAt": "2026-09-14T17:18:52.779748Z",
+    "displayName": "Test Citizen",
+    "phoneNumber": null,
+    "createdAt": "2026-09-14T17:15:13.804650Z",
+    "email": "test.citizen@pahadipulse.in",
+    "role": "admin",
+    "photoUrl": ""
+  },
+  {
+    "uid": "tourist_demo_user",
+    "isBlocked": false,
+    "id": "tourist_demo_user",
+    "updatedAt": "2026-09-14T17:15:13.449791Z",
+    "displayName": "PahadiPulse Member",
+    "phoneNumber": null,
+    "createdAt": "2026-09-14T17:15:13.449791Z",
+    "email": "tourist@pahadipulse.in",
+    "role": "tourist",
+    "photoUrl": ""
+  },
+  {
+    "uid": "citizen_518bdb95",
+    "id": "citizen_518bdb95",
+    "email": "citizen_518bdb95@pahadipulse.in",
+    "displayName": "Test Citizen",
+    "role": "admin",
+    "phoneNumber": null,
+    "photoUrl": "",
+    "isBlocked": false,
+    "createdAt": "2026-09-14T17:31:18.175879+00:00Z",
+    "updatedAt": "2026-09-14T17:31:18.385238+00:00Z"
+  },
+  {
+    "uid": "citizen_50dcf662",
+    "id": "citizen_50dcf662",
+    "email": "citizen_50dcf662@pahadipulse.in",
+    "displayName": "Test Citizen",
+    "role": "admin",
+    "phoneNumber": null,
+    "photoUrl": "",
+    "isBlocked": false,
+    "createdAt": "2026-09-14T17:31:29.639108+00:00Z",
+    "updatedAt": "2026-09-14T17:31:29.856073+00:00Z"
+  },
+  {
+    "uid": "citizen_ca25359b",
+    "id": "citizen_ca25359b",
+    "email": "citizen_ca25359b@pahadipulse.in",
+    "displayName": "Test Citizen",
+    "role": "admin",
+    "phoneNumber": null,
+    "photoUrl": "",
+    "isBlocked": false,
+    "createdAt": "2026-09-14T17:32:29.981564+00:00Z",
+    "updatedAt": "2026-09-14T17:32:30.171566+00:00Z"
+  },
+  {
+    "uid": "citizen_31967534",
+    "id": "citizen_31967534",
+    "email": "citizen_31967534@pahadipulse.in",
+    "displayName": "Test Citizen",
+    "role": "admin",
+    "phoneNumber": null,
+    "photoUrl": "",
+    "isBlocked": false,
+    "createdAt": "2026-09-14T17:37:16.284528+00:00Z",
+    "updatedAt": "2026-09-14T17:37:16.507026+00:00Z"
+  },
+  {
+    "uid": "citizen_76fc29ec",
+    "id": "citizen_76fc29ec",
+    "email": "citizen_76fc29ec@pahadipulse.in",
+    "displayName": "Test Citizen",
+    "role": "admin",
+    "phoneNumber": null,
+    "photoUrl": "",
+    "isBlocked": false,
+    "createdAt": "2026-09-14T17:37:58.510247+00:00Z",
+    "updatedAt": "2026-09-14T17:37:58.715171+00:00Z"
+  },
+  {
+    "uid": "citizen_3945f14e",
+    "id": "citizen_3945f14e",
+    "email": "citizen_3945f14e@pahadipulse.in",
+    "displayName": "Test Citizen",
+    "role": "admin",
+    "phoneNumber": null,
+    "photoUrl": "",
+    "isBlocked": false,
+    "createdAt": "2026-09-14T17:38:24.077941+00:00Z",
+    "updatedAt": "2026-09-14T17:38:24.324189+00:00Z"
+  }
+]

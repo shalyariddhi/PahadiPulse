@@ -1,0 +1,88 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function getUserData() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+
+    function hasRole(role) {
+      return isAuthenticated() && (
+        (request.auth.token.role == role) ||
+        (getUserData().role == role)
+      );
+    }
+
+    function isAdmin() {
+      return hasRole('admin') || hasRole('ADMIN');
+    }
+
+    function isCitizen() {
+      return hasRole('citizen') || hasRole('CITIZEN') || isAdmin();
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // 1. Users Collection
+    match /users/{userId} {
+      // Anyone can read their own profile, Admins can read all profiles
+      allow read: if isOwner(userId) || isAdmin();
+      // Users can update their own non-role fields; Only admins can change roles
+      allow create: if isAuthenticated() && request.auth.uid == userId;
+      allow update: if isOwner(userId) && (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['role'])) || isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // 2. Destinations Collection
+    match /destinations/{destinationId} {
+      // Publicly readable by all users & tourists
+      allow read: if true;
+      // Only Admins can create, update or delete destinations and carrying capacities
+      allow write: if isAdmin();
+    }
+
+    // 3. Citizen Reports Collection
+    match /reports/{reportId} {
+      // Publicly readable or accessible to authenticated users
+      allow read: if true;
+      // Any authenticated user or citizen can submit a report
+      allow create: if isAuthenticated();
+      // Citizens can edit their own pending report; Admins can update status (triage)
+      allow update: if (isAuthenticated() && resource.data.userId == request.auth.uid && resource.data.status == 'SUBMITTED') || isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // 4. Local Providers Collection
+    match /local_providers/{providerId} {
+      // Publicly readable
+      allow read: if true;
+      // Only Admins or verified providers can manage listings
+      allow write: if isAdmin();
+    }
+
+    // 5. Itineraries Collection
+    match /itineraries/{itineraryId} {
+      allow read: if true;
+      allow create: if true;
+      allow update, delete: if isAdmin() || (isAuthenticated() && resource.data.userId == request.auth.uid);
+    }
+
+    // 6. Pressure History & Predictions
+    match /pressure_history/{historyId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /pressure_predictions/{predictionId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+  }
+}
