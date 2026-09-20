@@ -1,0 +1,472 @@
+[
+  {
+    "type": "HIGH_SEVERITY_ISSUE",
+    "userId": null,
+    "id": "notif_0bb7bfb4c8",
+    "message": "[HIGH] Massive traffic jam stretching 5km on the ghat road.... Dispatch recommendation: Priority work-order queued for nodal department engineers with 4-hour SLA.",
+    "updatedAt": "2026-09-20T11:46:23.441631+00:00Z",
+    "targetRole": "admin",
+    "createdAt": "2026-09-20T11:46:14.873149+00:00Z",
+    "metadata": {
+      "severity": "HIGH",
+      "destination": "Mussoorie",
+      "category": "TRAFFIC"
+    },
+    "relatedEntityId": "rep_d1f3792e",
+    "title": "Incident Alert: TRAFFIC (Mussoorie)",
+    "relatedEntityType": "report",
+    "read": true
+  },
+  {
+    "type": "HIGH_SEVERITY_ISSUE",
+    "userId": null,
+    "id": "notif_0d063549cc",
+    "message": "[HIGH] Massive pipeline burst flooding road and leaving upper village with no water supply... Dispatch recommendation: Priority work-order queued for nodal department engineers with 4-hour SLA.",
+    "updatedAt": "2026-09-20T12:27:38.975341+00:00Z",
+    "targetRole": "admin",
+    "createdAt": "2026-09-20T12:18:12.462026+00:00Z",
+    "metadata": {
+      "severity": "HIGH",
+      "destination": "Kanatal",
+      "category": "WATER"
+    },
+    "relatedEntityId": "rep_9ae3ed7a",
+    "title": "Incident Alert: WATER (Kanatal)",
+    "relatedEntityType": "report",
+    "read": true
+  },
+  {
+    "type": "HIGH_SEVERITY_ISSUE",
+    "userId": null,
+    "id": "notif_0dad96e3e4",
+    "message": "[HIGH] Massive pipeline burst flooding road and leaving upper village with no water supply... Dispatch recommendation: Priority work-order queued for nodal department engineers with 4-hour SLA.",
+    "updatedAt": "2026-09-20T12:17:11.626661+00:00Z",
+    "targetRole": "admin",
+    "createdAt": "2026-09-20T12:13:46.147063+00:00Z",
+    "metadata": {
+      "severity": "HIGH",
+      "destination": "Kanatal",
+      "category": "WATER"
+    },
+    "relatedEntityId": "rep_b12f9af5",
+    "title": "Incident Alert: WATER (Kanatal)",
+    "relatedEntityType": "report",
+    "read": true
+  },
+  {
+    "type": "PREDICTION_WARNING",
+    "userId": null,
+    "id": "notif_0fd0e3c149",
+    "message": "High-altitude slope instability detected by SDRF. Avoid backcountry expeditions.",
+    "updatedAt": "2026-09-20T11:52:30.746330+00:00Z",
+    "targetRole": "tourist",
+    "createdAt": "2026-09-20T11:52:30.463512+00:00Z",
+    "metadata": {
+      "risk": "HIGH"
+    },
+    "relatedEntityId": "mana_pass",
+    "title": "Severe Avalanche Alert near Mana Pass",
+    "relatedEntityType": "destination",
+    "read": true
+  },
+  {
+    "type": "HIGH_SEVERITY_ISSUE",
+    "userId": null,
+    "id": "notif_1fb0ed2a31",
+    "message": "[HIGH] Massive pipeline burst flooding road and leaving upper village with no water supply... Dispatch recommendation: Priority work-order queued for nodal department engineers with 4-hour SLA.",
+    "updatedAt": "2026-09-20T11:52:31.455342+00:00Z",
+    "targetRole": "admin",
+    "createdAt": "2026-09-20T11:46:27.800527+00:00Z",
+    "metadata": {
+      "severity": "HIGH",
+      "destination": "Kanatal",
+      "category": "WATER"
+    },
+    "relatedEntityId": "rep_0f578bc6",
+    "title": "Incident Alert: WATER (Kanatal)",
+    "relatedEntityType": "report",
+    "read": true
+  },
+  {
+    "type": "HIGH_SEVERITY_ISSUE",
+    "userId": null,
+    "id": "notif_2ae52bb195",
+    "message": "[HIGH] Massive traffic jam stretching 5km on the ghat road.... Dispatch recommendation: Priority work-order queued for nodal department engineers with 4-hour SLA.",
+    "updatedAt": "2026-09-20T12:17:11.397905+00:00Z",
+    "targetRole": "admin",
+    "createdAt": "2026-09-20T12:17:02.069436+00:00Z",
+    "metadata": {
+      "severity": "HIGH",
+      "destination": "Mussoorie",
+      "category": "TRAFFIC"
+    },
+    "relatedEntityId": "rep_03cb7238",
+    "title": "Incident Alert: TRAFFIC (Mussoorie)",
+    "relatedEntityType": "report",
+    "read": true
+  },
+  {
+    "type": "PREDICTION_WARNING",
+    "userId": null,
+    "id": "notif_3754d38f11",
+    "message": "High-altitude slope instability detected by SDRF. Avoid backcountry expeditions.",
+    "updatedAt": "2026-09-20T12:17:10.980549+00:00Z",
+    "targetRole": "tourist",
+    "createdAt": "2026-09-20T12:17:10.778002+00:00Z",
+    "metadata": {
+      "risk": "HIGH"
+    },
+    "relatedEntityId": "mana_pass",
+    "title": "Severe Avalanche Alert near Mana Pass",
+    "relatedEntityType": "destination",
+    "read": true
+  },
+  {
+    "type": "HIGH_SEVERITY_ISSUE",
+    "userId": null,
+    "id": "notif_3c67693c98",
+    "message": "[HIGH] Massive traffic jam stretching 5km on the ghat road.... Dispatch recommendation: Priority work-order queued for nodal department engineers with 4-hour SLA.",
+    "updatedAt": "2026-09-20T12:13:32.624984+00:00Z",
+    "targetRole": "admin",
+    "createdAt": "2026-09-20T12:13:17.527178+00:00Z",
+    "metadata": {
+      "severity": "HIGH",
+      "destination": "Mussoorie",
+      "category": "TRAFFIC"
+    },
+    "relatedEntityId": "rep_c5c7dc0e",
+    "title": "Incident Alert: TRAFFIC (Mussoorie)",
+    "relatedEntityType": "report",
+    "read": true
+  },
+  {
+    "type": "PREDICTION_WARNING",
+    "userId": null,
+    "id": "notif_40787ec392",
+    "message": "High-altitude slope instability detected by SDRF. Avoid backcountry expeditions.",
+    "updatedAt": "2026-09-20T12:18:00.661288+00:00Z",
+    "targetRole": "tourist",
+    "createdAt": "2026-09-20T12:17:59.590388+00:00Z",
+    "metadata": {
+      "risk": "HIGH"
+    },
+    "relatedEntityId": "mana_pass",
+    "title": "Severe Avalanche Alert near Mana Pass",
+    "relatedEntityType": "destination",
+    "read": true
+  },
+  {
+    "type": "PREDICTION_WARNING",
+    "userId": null,
+    "id": "notif_50bd1c396b",
+    "message": "High-altitude slope instability detected by SDRF. Avoid backcountry expeditions.",
+    "updatedAt": "2026-09-20T11:45:41.027630+00:00Z",
+    "targetRole": "tourist",
+    "createdAt": "2026-09-20T11:45:40.167225+00:00Z",
+    "metadata": {
+      "risk": "HIGH"
+    },
+    "relatedEntityId": "mana_pass",
+    "title": "Severe Avalanche Alert near Mana Pass",
+    "relatedEntityType": "destination",
+    "read": true
+  },
+  {
+    "type": "HIGH_SEVERITY_ISSUE",
+    "userId": null,
+    "id": "notif_6a4dca012a",
+    "message": "[HIGH] Massive traffic jam stretching 5km on the ghat road.... Dispatch recommendation: Priority work-order queued for nodal department engineers with 4-hour SLA.",
+    "updatedAt": "2026-09-20T12:18:02.318800+00:00Z",
+    "targetRole": "admin",
+    "createdAt": "2026-09-20T12:17:42.563015+00:00Z",
+    "metadata": {
+      "severity": "HIGH",
+      "destination": "Mussoorie",
+      "category": "TRAFFIC"
+    },
+    "relatedEntityId": "rep_7e23f524",
+    "title": "Incident Alert: TRAFFIC (Mussoorie)",
+    "relatedEntityType": "report",
+    "read": true
+  },
+  {
+    "type": "PREDICTION_WARNING",
+    "userId": null,
+    "id": "notif_8582748c70",
+    "message": "High-altitude slope instability detected by SDRF. Avoid backcountry expeditions.",
+    "updatedAt": "2026-09-20T12:13:31.299131+00:00Z",
+    "targetRole": "tourist",
+    "createdAt": "2026-09-20T12:13:30.704989+00:00Z",
+    "metadata": {
+      "risk": "HIGH"
+    },
+    "relatedEntityId": "mana_pass",
+    "title": "Severe Avalanche Alert near Mana Pass",
+    "relatedEntityType": "destination",
+    "read": true
+  },
+  {
+    "type": "HIGH_SEVERITY_ISSUE",
+    "userId": null,
+    "id": "notif_8d0b8d55b6",
+    "message": "[HIGH] Massive traffic jam stretching 5km on the ghat road.... Dispatch recommendation: Priority work-order queued for nodal department engineers with 4-hour SLA.",
+    "updatedAt": "2026-09-20T11:52:31.247784+00:00Z",
+    "targetRole": "admin",
+    "createdAt": "2026-09-20T11:52:23.129113+00:00Z",
+    "metadata": {
+      "severity": "HIGH",
+      "destination": "Mussoorie",
+      "category": "TRAFFIC"
+    },
+    "relatedEntityId": "rep_4d6e73ee",
+    "title": "Incident Alert: TRAFFIC (Mussoorie)",
+    "relatedEntityType": "report",
+    "read": true
+  },
+  {
+    "type": "HIGH_SEVERITY_ISSUE",
+    "userId": null,
+    "id": "notif_a64806626e",
+    "message": "[HIGH] Massive pipeline burst flooding road and leaving upper village with no water supply... Dispatch recommendation: Priority work-order queued for nodal department engineers with 4-hour SLA.",
+    "updatedAt": "2026-09-20T12:18:03.489165+00:00Z",
+    "targetRole": "admin",
+    "createdAt": "2026-09-20T12:17:16.258967+00:00Z",
+    "metadata": {
+      "severity": "HIGH",
+      "destination": "Kanatal",
+      "category": "WATER"
+    },
+    "relatedEntityId": "rep_356b6a3b",
+    "title": "Incident Alert: WATER (Kanatal)",
+    "relatedEntityType": "report",
+    "read": true
+  },
+  {
+    "type": "CRITICAL_REPORT",
+    "userId": null,
+    "id": "notif_adm_001",
+    "message": "Arterial road blocked by active geological slope movement near Badrinath Highway (NH-07). PWD team dispatch required.",
+    "updatedAt": "2026-09-20T11:45:42.667180+00:00Z",
+    "targetRole": "admin",
+    "createdAt": "2026-09-20T11:20:32.361217+00:00Z",
+    "metadata": {
+      "location": "Joshimath Sector",
+      "severity": "CRITICAL",
+      "category": "ROAD"
+    },
+    "relatedEntityId": "rep_landslide_nh07",
+    "title": "Critical Hazard Report Received",
+    "relatedEntityType": "report",
+    "read": true
+  },
+  {
+    "type": "PRESSURE_SPIKE",
+    "userId": null,
+    "id": "notif_adm_002",
+    "message": "Carrying capacity load reached 92.4% with composite pressure score 84.5 (CRITICAL). Traffic gridlock detected on Library Chowk.",
+    "updatedAt": "2026-09-20T11:45:43.593588+00:00Z",
+    "targetRole": "admin",
+    "createdAt": "2026-09-20T10:35:32.361239+00:00Z",
+    "metadata": {
+      "pressureScore": 84.5,
+      "currentVisitors": 14200,
+      "status": "CRITICAL"
+    },
+    "relatedEntityId": "mussoorie",
+    "title": "Sudden Pressure Surge: Mussoorie",
+    "relatedEntityType": "destination",
+    "read": true
+  },
+  {
+    "type": "PREDICTION_WARNING",
+    "userId": null,
+    "id": "notif_adm_003",
+    "message": "Predictive model projects a +22% pressure surge (forecast 78.0) for Nainital over the next 48 hours. Dispersal protocols advised.",
+    "updatedAt": "2026-09-20T11:45:36.294472+00:00Z",
+    "targetRole": "admin",
+    "createdAt": "2026-09-20T07:45:32.361246+00:00Z",
+    "metadata": {
+      "horizonDays": 2,
+      "predictedPressure": 78.0,
+      "riskLevel": "CRITICAL"
+    },
+    "relatedEntityId": "nainital",
+    "title": "ML Forecast Warning: Nainital Weekend Influx",
+    "relatedEntityType": "destination",
+    "read": true
+  },
+  {
+    "type": "HIGH_SEVERITY_ISSUE",
+    "userId": null,
+    "id": "notif_adm_004",
+    "message": "Main distribution line burst reported in Almora municipal ward 4 affecting drinking water availability.",
+    "updatedAt": "2026-09-20T11:45:44.521504+00:00Z",
+    "targetRole": "admin",
+    "createdAt": "2026-09-20T05:45:32.361251+00:00Z",
+    "metadata": {
+      "district": "Almora",
+      "severity": "HIGH",
+      "category": "WATER"
+    },
+    "relatedEntityId": "rep_water_almora",
+    "title": "High-Priority Water Grid Failure",
+    "relatedEntityType": "report",
+    "read": true
+  },
+  {
+    "type": "PREDICTION_WARNING",
+    "userId": null,
+    "id": "notif_ddaeebfa6e",
+    "message": "High-altitude slope instability detected by SDRF. Avoid backcountry expeditions.",
+    "updatedAt": "2026-09-20T11:46:23.025456+00:00Z",
+    "targetRole": "tourist",
+    "createdAt": "2026-09-20T11:46:22.773926+00:00Z",
+    "metadata": {
+      "risk": "HIGH"
+    },
+    "relatedEntityId": "mana_pass",
+    "title": "Severe Avalanche Alert near Mana Pass",
+    "relatedEntityType": "destination",
+    "read": true
+  },
+  {
+    "type": "HIGH_SEVERITY_ISSUE",
+    "userId": null,
+    "id": "notif_e778e561a6",
+    "message": "[HIGH] Massive pipeline burst flooding road and leaving upper village with no water supply... Dispatch recommendation: Priority work-order queued for nodal department engineers with 4-hour SLA.",
+    "updatedAt": "2026-09-20T12:13:33.458233+00:00Z",
+    "targetRole": "admin",
+    "createdAt": "2026-09-20T11:52:36.801523+00:00Z",
+    "metadata": {
+      "severity": "HIGH",
+      "destination": "Kanatal",
+      "category": "WATER"
+    },
+    "relatedEntityId": "rep_5010e38d",
+    "title": "Incident Alert: WATER (Kanatal)",
+    "relatedEntityType": "report",
+    "read": true
+  },
+  {
+    "type": "HIGH_PRESSURE_ALERT",
+    "userId": null,
+    "id": "notif_tour_001",
+    "message": "Mussoorie is currently experiencing peak visitor pressure (82/100). For a serene Himalayan retreat, explore nearby Dhanaulti or Kanatal.",
+    "updatedAt": "2026-09-20T11:45:37.063615+00:00Z",
+    "targetRole": "tourist",
+    "createdAt": "2026-09-20T11:00:32.361255+00:00Z",
+    "metadata": {
+      "currentPressure": 82.0,
+      "alternativeDestinations": [
+        "dhanaulti",
+        "kanatal"
+      ]
+    },
+    "relatedEntityId": "mussoorie",
+    "title": "High Footfall Alert: Mussoorie & Mall Road",
+    "relatedEntityType": "destination",
+    "read": false
+  },
+  {
+    "type": "ITINERARY_UPDATE",
+    "userId": null,
+    "id": "notif_tour_002",
+    "message": "Your Garhwal circuit itinerary has an updated dynamic route recommendation saving 45 minutes travel time and mitigating peak pressure.",
+    "updatedAt": "2026-09-20T11:45:37.351420+00:00Z",
+    "targetRole": "tourist",
+    "createdAt": "2026-09-20T09:15:32.361261+00:00Z",
+    "metadata": {
+      "savingMinutes": 45,
+      "mitigationScore": 76.5
+    },
+    "relatedEntityId": "itin_sample_garhwal",
+    "title": "Eco-Smart Route Optimization Available",
+    "relatedEntityType": "itinerary",
+    "read": false
+  },
+  {
+    "type": "SAVED_DESTINATION_ALERT",
+    "userId": null,
+    "id": "notif_tour_003",
+    "message": "Chopta is currently enjoying serene green pressure (22/100) with clear weather. Ideal conditions for the Tungnath alpine trail.",
+    "updatedAt": "2026-09-20T11:45:37.659748+00:00Z",
+    "targetRole": "tourist",
+    "createdAt": "2026-09-20T03:45:32.361266+00:00Z",
+    "metadata": {
+      "pressureScore": 22.0,
+      "status": "LOW"
+    },
+    "relatedEntityId": "chopta",
+    "title": "Saved Destination: Chopta at Optimal Capacity",
+    "relatedEntityType": "destination",
+    "read": true
+  },
+  {
+    "type": "GENERAL_ANNOUNCEMENT",
+    "userId": null,
+    "id": "notif_tour_004",
+    "message": "Autumn eco-tourism permits and high-altitude trekking registrations are now open with localized community homestay credits.",
+    "updatedAt": "2026-09-20T11:45:37.997577+00:00Z",
+    "targetRole": "tourist",
+    "createdAt": "2026-09-19T11:45:32.361270+00:00Z",
+    "metadata": {
+      "season": "Autumn"
+    },
+    "relatedEntityId": "advisory_autumn",
+    "title": "Uttarakhand State Travel Advisory",
+    "relatedEntityType": "announcement",
+    "read": true
+  },
+  {
+    "id": "notif_4264e7a761",
+    "userId": null,
+    "title": "Incident Alert: TRAFFIC (Mussoorie)",
+    "message": "[HIGH] Massive traffic jam stretching 5km on the ghat road.... Dispatch recommendation: Priority work-order queued for nodal department engineers with 4-hour SLA.",
+    "type": "HIGH_SEVERITY_ISSUE",
+    "read": true,
+    "createdAt": "2026-09-20T12:27:29.010310+00:00Z",
+    "relatedEntityId": "rep_7a8f874d",
+    "relatedEntityType": "report",
+    "targetRole": "admin",
+    "metadata": {
+      "severity": "HIGH",
+      "category": "TRAFFIC",
+      "destination": "Mussoorie"
+    },
+    "updatedAt": "2026-09-20T12:27:38.399565+00:00Z"
+  },
+  {
+    "id": "notif_04801aaa1a",
+    "userId": null,
+    "title": "Severe Avalanche Alert near Mana Pass",
+    "message": "High-altitude slope instability detected by SDRF. Avoid backcountry expeditions.",
+    "type": "PREDICTION_WARNING",
+    "read": true,
+    "createdAt": "2026-09-20T12:27:36.433557+00:00Z",
+    "relatedEntityId": "mana_pass",
+    "relatedEntityType": "destination",
+    "targetRole": "tourist",
+    "metadata": {
+      "risk": "HIGH"
+    },
+    "updatedAt": "2026-09-20T12:27:37.247744+00:00Z"
+  },
+  {
+    "id": "notif_854d81bf59",
+    "userId": null,
+    "title": "Incident Alert: WATER (Kanatal)",
+    "message": "[HIGH] Massive pipeline burst flooding road and leaving upper village with no water supply... Dispatch recommendation: Priority work-order queued for nodal department engineers with 4-hour SLA.",
+    "type": "HIGH_SEVERITY_ISSUE",
+    "read": false,
+    "createdAt": "2026-09-20T12:27:45.132966+00:00Z",
+    "relatedEntityId": "rep_503c01ed",
+    "relatedEntityType": "report",
+    "targetRole": "admin",
+    "metadata": {
+      "severity": "HIGH",
+      "category": "WATER",
+      "destination": "Kanatal"
+    },
+    "updatedAt": "2026-09-20T12:27:45.132980+00:00Z"
+  }
+]

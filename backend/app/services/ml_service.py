@@ -18,9 +18,12 @@ from app.models.schemas import (
 from ml.inference.predictor import pressure_predictor
 from app.core.firebase import db
 
+from app.ml.report_classifier import report_classifier
+
 class MLService:
     def __init__(self):
         self.predictor = pressure_predictor
+        self.report_classifier = report_classifier
 
     def predict_pressure(self, dest_data: Dict[str, Any], horizon_days: int = 3) -> DestinationPredictionResponse:
         """
@@ -38,78 +41,13 @@ class MLService:
         )
         return DestinationPredictionResponse(**pred_dict)
 
-    def classify_report(self, description: str) -> AIReportClassification:
+    def classify_report(self, description: str, image_url: Optional[str] = None) -> AIReportClassification:
         """
-        Classifies citizen issue description into Category, Severity (1-5), and confidence.
+        Classifies citizen issue description into Category, Severity (LOW, MEDIUM, HIGH, CRITICAL),
+        confidence, and explanation using lightweight NLP/ML engine.
         """
-        desc_lower = description.lower()
+        return self.report_classifier.classify(description, image_url=image_url)
 
-        # Keyword heuristics for high-risk mountain emergency signals
-        if any(w in desc_lower for w in ["landslide", "rockfall", "bridge collapsed", "cloudburst", "flash flood", "road block"]):
-            pred_cat = ReportCategory.ROAD
-            if any(w in desc_lower for w in ["cloudburst", "flash flood"]):
-                pred_cat = ReportCategory.ENVIRONMENT
-            pred_sev = 5
-            confidence = 0.96
-            explanation = "High-priority mountain hazard detected. Direct disruption to regional connectivity/life safety."
-            action = "Immediate dispatch of district disaster response & PWD heavy clearance machinery."
-            return AIReportClassification(
-                aiCategory=pred_cat,
-                aiSeverity=pred_sev,
-                aiConfidence=confidence,
-                aiExplanation=explanation,
-                recommendedAction=action
-            )
-
-        if any(w in desc_lower for w in ["water shortage", "no water", "tanker", "pipe burst", "dry tap", "dirty water", "sewage"]):
-            pred_cat = ReportCategory.WATER
-            pred_sev = 4 if any(w in desc_lower for w in ["3 days", "dry", "burst", "dirty"]) else 3
-            confidence = 0.92
-            explanation = "Drinking water supply or filtration failure identified in municipal grid."
-            action = "Alert Jal Sansthan water supply engineer & initiate emergency water tanker deployment."
-            return AIReportClassification(
-                aiCategory=pred_cat,
-                aiSeverity=pred_sev,
-                aiConfidence=confidence,
-                aiExplanation=explanation,
-                recommendedAction=action
-            )
-
-        if any(w in desc_lower for w in ["traffic", "jam", "congestion", "gridlock", "bottleneck", "parking full", "blocked vehicle"]):
-            pred_cat = ReportCategory.TRAFFIC
-            pred_sev = 4 if any(w in desc_lower for w in ["massive", "hours", "5km", "gridlock", "ambulance"]) else 3
-            confidence = 0.94
-            explanation = "Transit bottleneck or severe vehicular congestion identified on regional access route."
-            action = "Alert regional traffic control and trigger dynamic detour recommendations."
-            return AIReportClassification(
-                aiCategory=pred_cat,
-                aiSeverity=pred_sev,
-                aiConfidence=confidence,
-                aiExplanation=explanation,
-                recommendedAction=action
-            )
-
-        if any(w in desc_lower for w in ["garbage", "waste", "trash", "litter", "dump", "plastic", "overflowing bin"]):
-            pred_cat = ReportCategory.WASTE
-            pred_sev = 3
-            confidence = 0.91
-            explanation = "Solid waste accumulation detected exceeding local municipal collection cadence."
-            action = "Dispatch Nagar Palika waste management vehicle for priority clearance."
-            return AIReportClassification(
-                aiCategory=pred_cat,
-                aiSeverity=pred_sev,
-                aiConfidence=confidence,
-                aiExplanation=explanation,
-                recommendedAction=action
-            )
-
-        return AIReportClassification(
-            aiCategory=ReportCategory.OTHER,
-            aiSeverity=3,
-            aiConfidence=0.75,
-            aiExplanation="Civic report processed by keyword classifier for administrative review.",
-            recommendedAction="District triage team verification."
-        )
 
     def forecast_pressure(self, dest_data: Dict[str, Any], days: int = 7) -> DestinationForecastResponse:
         """

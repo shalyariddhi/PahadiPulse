@@ -62,13 +62,83 @@ def test_submit_report():
         "category": "OTHER",
         "description": "Massive traffic jam stretching 5km on the ghat road.",
         "latitude": 30.45,
-        "longitude": 78.06
+        "longitude": 78.06,
+        "userSeverity": 4,
+        "imageUrl": "https://example.com/traffic.jpg"
     }
     res = client.post("/api/reports", json=payload)
-    assert res.status_code == 200
+    assert res.status_code == 201
     data = res.json()
     assert data["status"] == "AI_CLASSIFIED"
     assert data["aiCategory"] in ["TRAFFIC", "ROAD"]
+    assert data["userSeverity"] == 4
+    assert data["id"].startswith("rep_")
+    assert "id" in data
+    assert "aiSeverity" in data
+
+    # Test GET /api/reports/{id}
+    rep_id = data["id"]
+    get_res = client.get(f"/api/reports/{rep_id}")
+    assert get_res.status_code == 200
+    assert get_res.json()["id"] == rep_id
+    assert get_res.json()["description"] == payload["description"]
+
+def test_get_my_reports():
+    token = "citizen-token-test-user"
+    headers = {"Authorization": f"Bearer {token}"}
+    
+    # Submit a report first
+    payload = {
+        "destinationId": "kanatal",
+        "category": "WATER",
+        "description": "Acute water scarcity in upper village sector",
+        "latitude": 30.41,
+        "longitude": 78.34,
+        "userSeverity": 3
+    }
+    sub_res = client.post("/api/reports", json=payload, headers=headers)
+    assert sub_res.status_code == 201
+    
+    # Fetch my reports
+    res = client.get("/api/reports/my", headers=headers)
+    assert res.status_code == 200
+    my_list = res.json()
+    assert isinstance(my_list, list)
+    assert len(my_list) >= 1
+
+def test_upload_report_image():
+    # Valid JPEG image upload
+    dummy_jpeg = b"\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x01\x00`\x00`\x00\x00\xff\xdb\x00C\x00" + b"\x00" * 100
+    files = {"file": ("test_road_issue.jpg", dummy_jpeg, "image/jpeg")}
+    res = client.post("/api/reports/upload-image", files=files)
+    assert res.status_code == 200
+    data = res.json()
+    assert "imageUrl" in data
+    assert data["sizeBytes"] == len(dummy_jpeg)
+    assert data["contentType"] == "image/jpeg"
+
+def test_upload_report_image_validation_error():
+    # Invalid file type
+    files = {"file": ("test.txt", b"Hello world text file", "text/plain")}
+    res = client.post("/api/reports/upload-image", files=files)
+    assert res.status_code == 400
+
+def test_all_report_categories_classification():
+    test_cases = [
+        ("Water shortage and pipe burst in Mall road", "WATER"),
+        ("Garbage and plastic waste dump overflowing", "WASTE"),
+        ("Massive landslide and rockfall blocking highway", "ROAD"),
+        ("Severe traffic congestion and 5km vehicle gridlock", "TRAFFIC"),
+        ("Medical emergency near viewpoint no ambulance clinic", "HEALTH"),
+        ("Cell phone network tower down and no mobile signal", "CONNECTIVITY"),
+        ("Tourists overcharging scam by unauthorized guides", "TOURISM"),
+        ("Cloudburst and forest wildfire hazard on mountain slope", "ENVIRONMENT")
+    ]
+    for text, expected_cat in test_cases:
+        res = client.post("/api/ai/classify-report", json={"text": text})
+        assert res.status_code == 200
+        cat = res.json()["aiCategory"]
+        assert cat == expected_cat, f"Expected {expected_cat} for '{text}', got {cat}"
 
 def test_generate_itinerary():
     payload = {
@@ -88,9 +158,16 @@ def test_generate_itinerary():
     assert any(name in ["Kanatal", "Dhanaulti", "Chopta", "Chakrata"] for name in chosen_names)
 
 def test_admin_analytics():
-    res = client.get("/api/admin/analytics")
+    # Unauthorized request without admin token should fail with 401 or 403
+    unauth_res = client.get("/api/admin/analytics")
+    assert unauth_res.status_code in [401, 403]
+
+    # Authorized request with admin token
+    admin_headers = {"Authorization": "Bearer admin-token-officer"}
+    res = client.get("/api/admin/analytics", headers=admin_headers)
     assert res.status_code == 200
     data = res.json()
     assert data["totalDestinations"] >= 20
     assert data["highPressureDestinations"] >= 1
     assert len(data["districtSummaries"]) > 0
+

@@ -8,6 +8,7 @@ import '../models/provider.dart';
 import '../models/itinerary.dart';
 import '../models/prediction.dart';
 import '../models/user.dart';
+import '../models/notification.dart';
 
 class ApiService {
   static final ApiService _instance = ApiService._internal();
@@ -185,54 +186,128 @@ class ApiService {
     required double latitude,
     required double longitude,
     String? category,
+    int? userSeverity,
+    String? imageUrl,
     String? userId,
     String? userName,
+    String? authToken,
   }) async {
     try {
+      final headers = <String, String>{
+        'Content-Type': 'application/json',
+      };
+      if (authToken != null && authToken.isNotEmpty) {
+        headers['Authorization'] = 'Bearer $authToken';
+      }
+
+      final payload = {
+        'destinationId': destinationId,
+        'description': description,
+        'category': category ?? 'OTHER',
+        'latitude': latitude,
+        'longitude': longitude,
+        'imageUrl': imageUrl ?? '',
+        'userId': userId ?? 'citizen_demo_user',
+        'userName': userName ?? 'Pahadi Citizen',
+      };
+      if (userSeverity != null) {
+        payload['userSeverity'] = userSeverity;
+      }
+
       final res = await http.post(
         Uri.parse('$baseUrl/reports'),
-        headers: {'Content-Type': 'application/json'},
-        body: json.encode({
-          'destinationId': destinationId,
-          'description': description,
-          'category': category ?? 'OTHER',
-          'latitude': latitude,
-          'longitude': longitude,
-          'userId': userId ?? 'tourist_user',
-          'userName': userName ?? 'Pahadi Tourist',
-        }),
-      ).timeout(const Duration(seconds: 5));
+        headers: headers,
+        body: json.encode(payload),
+      ).timeout(const Duration(seconds: 7));
 
       if (res.statusCode == 200 || res.statusCode == 201) {
         return Report.fromJson(json.decode(res.body));
+      } else {
+        final err = json.decode(res.body);
+        throw Exception(err['detail'] ?? 'Failed to submit report (${res.statusCode})');
       }
-    } catch (_) {}
-
-    return Report(
-      id: 'rep_local_${DateTime.now().millisecondsSinceEpoch}',
-      userId: userId ?? 'tourist_user',
-      userName: userName ?? 'Pahadi Traveler',
-      destinationId: destinationId,
-      destinationName: destinationId.toUpperCase(),
-      category: category ?? 'ROAD',
-      description: description,
-      imageUrl: '',
-      latitude: latitude,
-      longitude: longitude,
-      aiCategory: category ?? 'ROAD',
-      aiSeverity: 4,
-      aiConfidence: 0.94,
-      aiExplanation: 'AI classified as mountain road transit bottleneck.',
-      status: 'AI_CLASSIFIED',
-      createdAt: DateTime.now().toIso8601String(),
-    );
+    } catch (e) {
+      print("[ApiService] submitReport error: $e");
+      rethrow;
+    }
   }
 
-  Future<List<Report>> getReports({String? userId, String? destinationId}) async {
+  Future<Map<String, dynamic>> uploadReportImage({
+    required List<int> fileBytes,
+    required String filename,
+    required String contentType,
+  }) async {
+    try {
+      final uri = Uri.parse('$baseUrl/reports/upload-image');
+      final request = http.MultipartRequest('POST', uri);
+      
+      request.files.add(
+        http.MultipartFile.fromBytes(
+          'file',
+          fileBytes,
+          filename: filename,
+        ),
+      );
+
+      final streamedResponse = await request.send().timeout(const Duration(seconds: 10));
+      final response = await http.Response.fromStream(streamedResponse);
+
+      if (response.statusCode == 200) {
+        return json.decode(response.body);
+      } else {
+        final err = json.decode(response.body);
+        throw Exception(err['detail'] ?? 'Upload failed (${response.statusCode})');
+      }
+    } catch (e) {
+      print("[ApiService] uploadReportImage error: $e");
+      rethrow;
+    }
+  }
+
+  Future<List<Report>> getMyReports({String? authToken, String? fallbackUserId}) async {
+    try {
+      final headers = <String, String>{};
+      if (authToken != null && authToken.isNotEmpty) {
+        headers['Authorization'] = 'Bearer $authToken';
+      } else {
+        headers['Authorization'] = 'Bearer citizen-token-demo';
+      }
+
+      final res = await http.get(
+        Uri.parse('$baseUrl/reports/my'),
+        headers: headers,
+      ).timeout(const Duration(seconds: 5));
+
+      if (res.statusCode == 200) {
+        final List data = json.decode(res.body);
+        return data.map((r) => Report.fromJson(r)).toList();
+      }
+    } catch (e) {
+      print("[ApiService] getMyReports error: $e");
+    }
+
+    return getReports(userId: fallbackUserId);
+  }
+
+  Future<Report?> getReportById(String id) async {
+    try {
+      final res = await http.get(Uri.parse('$baseUrl/reports/$id')).timeout(const Duration(seconds: 4));
+      if (res.statusCode == 200) {
+        return Report.fromJson(json.decode(res.body));
+      }
+    } catch (e) {
+      print("[ApiService] getReportById error: $e");
+    }
+    return null;
+  }
+
+  Future<List<Report>> getReports({String? userId, String? destinationId, String? category, String? status}) async {
     try {
       final queryParams = <String, String>{};
       if (userId != null && userId.isNotEmpty) queryParams['userId'] = userId;
       if (destinationId != null && destinationId.isNotEmpty) queryParams['destinationId'] = destinationId;
+      if (category != null && category.isNotEmpty) queryParams['category'] = category;
+      if (status != null && status.isNotEmpty) queryParams['status'] = status;
 
       final uri = Uri.parse('$baseUrl/reports').replace(queryParameters: queryParams.isEmpty ? null : queryParams);
       final res = await http.get(uri).timeout(const Duration(seconds: 4));
@@ -240,9 +315,12 @@ class ApiService {
         final List data = json.decode(res.body);
         return data.map((r) => Report.fromJson(r)).toList();
       }
-    } catch (_) {}
+    } catch (e) {
+      print("[ApiService] getReports error: $e");
+    }
     return _getFallbackReports();
   }
+
 
   // Fallback Data
   List<Destination> _getFallbackDestinations() {
@@ -389,46 +467,58 @@ class ApiService {
   List<LocalProvider> _getFallbackProviders() {
     return [
       LocalProvider(
-        id: 'prov_homestay_01',
-        name: 'Pahadi Soul Eco Homestay',
+        id: 'prov_kanatal_01',
+        name: 'Pahadi Soul Homestay & Organic Orchard',
         category: 'HOMESTAY',
         destinationId: 'kanatal',
         destinationName: 'Kanatal',
-        ownerName: 'Virendra Singh Rawat',
+        ownerName: 'Suresh Negi',
         contactPhone: '+91 98765 43210',
+        locationAddress: 'Upper Ridge Trail, Kanatal',
         rating: 4.9,
-        reviewCount: 48,
+        reviewCount: 42,
         priceStartingINR: 1800,
-        description: 'Authentic stone & mud homestay with organic apple orchard and solar-powered warm water.',
-        isCertified: true,
+        pricingUnit: 'per room/night',
+        description: 'Authentic stone-and-wood Garhwali homestay serving Mandua roti, Bhatt ki dal, and wild rhododendron cordial with panoramic Himalayan vistas.',
+        externalBookingUrl: 'https://pahadipulse.in/demo-providers/prov_kanatal_01',
+        isDemo: true,
+        disclaimer: 'Synthetic demo provider for hackathon demonstration.',
       ),
       LocalProvider(
-        id: 'prov_guide_01',
-        name: 'Chopta Alpine Trek Guides',
+        id: 'prov_chopta_02',
+        name: 'Tungnath Summit Mountaineering Guides',
         category: 'LOCAL_GUIDE',
         destinationId: 'chopta',
         destinationName: 'Chopta',
-        ownerName: 'Kailash Negi',
-        contactPhone: '+91 98765 11223',
-        rating: 4.8,
-        reviewCount: 92,
-        priceStartingINR: 1200,
-        description: 'Govt-certified mountain guide specializing in Tungnath & Chandrashila summit sunrise treks.',
-        isCertified: true,
+        ownerName: 'Virendra Singh',
+        contactPhone: '+91 98765 43213',
+        locationAddress: 'Chopta Trailhead',
+        rating: 5.0,
+        reviewCount: 78,
+        priceStartingINR: 1000,
+        pricingUnit: 'per group trek',
+        description: 'Local high-altitude guides specializing in Tungnath-Chandrashila sunrise ascents, snow trail safety, and birdwatching.',
+        externalBookingUrl: 'https://pahadipulse.in/demo-providers/prov_chopta_02',
+        isDemo: true,
+        disclaimer: 'Synthetic demo provider for hackathon demonstration.',
       ),
       LocalProvider(
-        id: 'prov_food_01',
-        name: 'Dhanaulti Organic Kitchen',
+        id: 'prov_dhanaulti_01',
+        name: 'Buransh Himalayan Cottage & Herbal Cafe',
         category: 'LOCAL_FOOD',
         destinationId: 'dhanaulti',
         destinationName: 'Dhanaulti',
         ownerName: 'Sunita Devi',
-        contactPhone: '+91 98765 33445',
-        rating: 4.9,
+        contactPhone: '+91 98765 43214',
+        locationAddress: 'Eco-Park Road, Dhanaulti',
+        rating: 4.8,
         reviewCount: 65,
         priceStartingINR: 350,
-        description: 'Farm-to-table organic kitchen serving traditional millet rotis, jakhiya aloo, and rhododendron juice.',
-        isCertified: true,
+        pricingUnit: 'per Pahadi Thali',
+        description: 'Farm-to-table cuisine prepared with mountain millets, Jakhiya tempered potatoes, Kafuli spinach gravy, and freshly pressed wild berries.',
+        externalBookingUrl: 'https://pahadipulse.in/demo-providers/prov_dhanaulti_01',
+        isDemo: true,
+        disclaimer: 'Synthetic demo provider for hackathon demonstration.',
       ),
     ];
   }
@@ -455,4 +545,135 @@ class ApiService {
       )
     ];
   }
+
+  // ----------------- In-App Notifications & Alerts -----------------
+  Future<List<NotificationItem>> getNotifications({
+    String? role = 'tourist',
+    String? type,
+    bool unreadOnly = false,
+  }) async {
+    try {
+      final queryParams = <String, String>{};
+      if (role != null && role.isNotEmpty) queryParams['role'] = role;
+      if (type != null && type.isNotEmpty && type != 'ALL') queryParams['type'] = type;
+      if (unreadOnly) queryParams['unread_only'] = 'true';
+
+      final uri = Uri.parse('$baseUrl/notifications').replace(
+        queryParameters: queryParams.isEmpty ? null : queryParams,
+      );
+      final res = await http.get(uri).timeout(const Duration(seconds: 5));
+      if (res.statusCode == 200) {
+        final List data = json.decode(res.body);
+        return data.map((n) => NotificationItem.fromJson(n)).toList();
+      }
+    } catch (e) {
+      print("[ApiService] getNotifications error: $e");
+    }
+    return _getFallbackNotifications(unreadOnly: unreadOnly);
+  }
+
+  Future<int> getUnreadNotificationCount({String? role = 'tourist'}) async {
+    try {
+      final queryParams = <String, String>{};
+      if (role != null && role.isNotEmpty) queryParams['role'] = role;
+
+      final uri = Uri.parse('$baseUrl/notifications/unread-count').replace(
+        queryParameters: queryParams.isEmpty ? null : queryParams,
+      );
+      final res = await http.get(uri).timeout(const Duration(seconds: 5));
+      if (res.statusCode == 200) {
+        final Map<String, dynamic> data = json.decode(res.body);
+        return data['unreadCount'] ?? 0;
+      }
+    } catch (e) {
+      print("[ApiService] getUnreadNotificationCount error: $e");
+    }
+    return _getFallbackNotifications(unreadOnly: true).length;
+  }
+
+  Future<bool> markNotificationRead(String id) async {
+    try {
+      final uri = Uri.parse('$baseUrl/notifications/$id/read');
+      final res = await http.patch(uri).timeout(const Duration(seconds: 5));
+      return res.statusCode == 200;
+    } catch (e) {
+      print("[ApiService] markNotificationRead error: $e");
+      return false;
+    }
+  }
+
+  Future<bool> markAllNotificationsRead({String? role = 'tourist'}) async {
+    try {
+      final queryParams = <String, String>{};
+      if (role != null && role.isNotEmpty) queryParams['role'] = role;
+
+      final uri = Uri.parse('$baseUrl/notifications/mark-all-read').replace(
+        queryParameters: queryParams.isEmpty ? null : queryParams,
+      );
+      final res = await http.post(uri).timeout(const Duration(seconds: 5));
+      return res.statusCode == 200;
+    } catch (e) {
+      print("[ApiService] markAllNotificationsRead error: $e");
+      return false;
+    }
+  }
+
+  List<NotificationItem> _getFallbackNotifications({bool unreadOnly = false}) {
+    final list = [
+      NotificationItem(
+        id: 'notif_tour_001',
+        title: 'High Footfall Alert: Mussoorie & Mall Road',
+        message: 'Mussoorie is currently experiencing peak visitor pressure (82/100). For a serene Himalayan retreat, explore nearby Dhanaulti or Kanatal.',
+        type: 'HIGH_PRESSURE_ALERT',
+        read: false,
+        createdAt: DateTime.now().subtract(const Duration(minutes: 45)).toIso8601String(),
+        relatedEntityId: 'mussoorie',
+        relatedEntityType: 'destination',
+        targetRole: 'tourist',
+        metadata: const {'currentPressure': 82.0, 'alternative': 'Dhanaulti'},
+      ),
+      NotificationItem(
+        id: 'notif_tour_002',
+        title: 'Eco-Smart Route Optimization Available',
+        message: 'Your Garhwal circuit itinerary has an updated dynamic route recommendation saving 45 minutes travel time and mitigating peak pressure.',
+        type: 'ITINERARY_UPDATE',
+        read: false,
+        createdAt: DateTime.now().subtract(const Duration(hours: 2, minutes: 30)).toIso8601String(),
+        relatedEntityId: 'itin_sample_garhwal',
+        relatedEntityType: 'itinerary',
+        targetRole: 'tourist',
+        metadata: const {'mitigationScore': 76.5, 'savingMinutes': 45},
+      ),
+      NotificationItem(
+        id: 'notif_tour_003',
+        title: 'Saved Destination: Chopta at Optimal Capacity',
+        message: 'Chopta is currently enjoying serene green pressure (22/100) with clear weather. Ideal conditions for the Tungnath alpine trail.',
+        type: 'SAVED_DESTINATION_ALERT',
+        read: true,
+        createdAt: DateTime.now().subtract(const Duration(hours: 8)).toIso8601String(),
+        relatedEntityId: 'chopta',
+        relatedEntityType: 'destination',
+        targetRole: 'tourist',
+        metadata: const {'pressureScore': 22.0, 'status': 'LOW'},
+      ),
+      NotificationItem(
+        id: 'notif_tour_004',
+        title: 'Uttarakhand State Travel Advisory',
+        message: 'Autumn eco-tourism permits and high-altitude trekking registrations are now open with localized community homestay credits.',
+        type: 'GENERAL_ANNOUNCEMENT',
+        read: true,
+        createdAt: DateTime.now().subtract(const Duration(days: 1)).toIso8601String(),
+        relatedEntityId: 'advisory_autumn',
+        relatedEntityType: 'announcement',
+        targetRole: 'tourist',
+        metadata: const {'season': 'Autumn'},
+      ),
+    ];
+
+    if (unreadOnly) {
+      return list.where((n) => !n.read).toList();
+    }
+    return list;
+  }
 }
+

@@ -23,7 +23,6 @@ class Settings(BaseSettings):
         "http://localhost:8080",
         "http://127.0.0.1:5173",
         "http://127.0.0.1:3000",
-        "*"
     ]
     
     # Firebase configuration
@@ -39,11 +38,16 @@ class Settings(BaseSettings):
     WEIGHT_TRAFFIC: float = 0.15
     WEIGHT_ENVIRONMENT: float = 0.10
 
+    # Rate limiting
+    RATE_LIMIT_PER_MINUTE: int = 60
+
     def get_cors_origins(self) -> List[str]:
         if isinstance(self.ALLOWED_ORIGINS, list):
-            return self.ALLOWED_ORIGINS
+            origins = [o.strip() for o in self.ALLOWED_ORIGINS if o.strip() and o.strip() != "*"]
+            return origins if origins else ["http://localhost:5173"]
         if isinstance(self.ALLOWED_ORIGINS, str):
-            return [origin.strip() for origin in self.ALLOWED_ORIGINS.split(",") if origin.strip()]
-        return ["*"]
+            origins = [origin.strip() for origin in self.ALLOWED_ORIGINS.split(",") if origin.strip() and origin.strip() != "*"]
+            return origins if origins else ["http://localhost:5173"]
+        return ["http://localhost:5173", "http://localhost:3000"]
 
 settings = Settings()

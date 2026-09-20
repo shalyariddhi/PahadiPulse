@@ -19,6 +19,8 @@ class AppColors {
   static const Color statusModerate = Color(0xFFF59E0B);
   static const Color statusHigh = Color(0xFFF97316);
   static const Color statusCritical = Color(0xFFEF4444);
+  static const Color roseAlert = Color(0xFFF43F5E);
+  static const Color danger = Color(0xFFEF4444);
 }
 
 class AppTheme {

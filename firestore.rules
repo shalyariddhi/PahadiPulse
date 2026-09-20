@@ -84,5 +84,25 @@ service cloud.firestore {
       allow read: if true;
       allow write: if isAdmin();
     }
+
+    // 7. In-App Notifications & Alerts
+    match /notifications/{notificationId} {
+      // Users can read notifications directed to their UID, or broadcast notifications, or admin notifications if admin
+      allow read: if isAuthenticated() && (
+        resource.data.userId == request.auth.uid ||
+        resource.data.userId == null ||
+        resource.data.targetRole == 'tourist' ||
+        (resource.data.targetRole == 'admin' && isAdmin()) ||
+        isAdmin()
+      );
+      // Only admins or backend services can create or delete notifications
+      allow create, delete: if isAdmin();
+      // Users can mark notifications read
+      allow update: if isAuthenticated() && (
+        resource.data.userId == request.auth.uid ||
+        isAdmin() ||
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['read', 'updatedAt'])
+      );
+    }
   }
 }

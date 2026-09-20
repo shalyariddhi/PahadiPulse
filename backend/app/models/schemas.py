@@ -1,7 +1,15 @@
 from pydantic import BaseModel, Field, EmailStr, field_validator
 from typing import Optional, List, Dict, Any
 from datetime import datetime
-from app.models.domain import PressureStatus, ReportCategory, ReportStatus, ProviderCategory, UserRole
+from app.models.domain import (
+    PressureStatus,
+    ReportCategory,
+    ReportStatus,
+    ReportSeverity,
+    ProviderCategory,
+    UserRole,
+    NotificationType
+)
 
 # ----------------- User & Authentication Schemas -----------------
 class UserProfileBase(BaseModel):
@@ -175,27 +183,62 @@ class DestinationPredictionResponse(BaseModel):
     dataSource: str = "SYNTHETIC_ML_PIPELINE"
     disclaimer: str
 
+from app.models.domain import (
+    PressureStatus,
+    ReportCategory,
+    ReportSeverity,
+    ReportStatus,
+    ProviderCategory,
+    UserRole,
+    severity_to_numeric,
+    numeric_to_severity
+)
+
 # ----------------- Citizen Reports -----------------
 class ReportCreate(BaseModel):
-    userId: Optional[str] = "demo_citizen"
-    userName: Optional[str] = "Pahadi Citizen"
-    destinationId: str
+    userId: Optional[str] = None
+    userName: Optional[str] = None
+    destinationId: str = Field(..., min_length=2)
     category: Optional[ReportCategory] = ReportCategory.OTHER
-    description: str = Field(..., min_length=5, description="Detailed description of issue")
+    description: str = Field(..., min_length=5, max_length=2000, description="Detailed description of issue")
     imageUrl: Optional[str] = ""
-    latitude: float
-    longitude: float
+    latitude: float = Field(..., ge=-90.0, le=90.0)
+    longitude: float = Field(..., ge=-180.0, le=180.0)
+    userSeverity: Optional[int] = Field(None, ge=1, le=5, description="Optional user-reported severity (1 to 5)")
 
 class AIReportClassification(BaseModel):
-    aiCategory: ReportCategory
-    aiSeverity: int = Field(..., ge=1, le=5, description="Severity from 1 (Low) to 5 (Critical)")
-    aiConfidence: float = Field(..., ge=0.0, le=1.0)
-    aiExplanation: str
+    category: ReportCategory
+    severity: ReportSeverity
+    confidence: float = Field(..., ge=0.0, le=1.0)
+    explanation: str
     recommendedAction: str
+    disclaimer: str = "Lightweight ML/NLP regional triage model for IBM Hackathon demonstration (not claimed as production-grade computer vision/LLM)."
+    
+    # Backward compatibility aliases
+    aiCategory: Optional[ReportCategory] = None
+    aiSeverity: Optional[int] = None
+    aiConfidence: Optional[float] = None
+    aiExplanation: Optional[str] = None
+
+    def model_post_init(self, __context: Any) -> None:
+        if self.aiCategory is None:
+            self.aiCategory = self.category
+        if self.aiSeverity is None:
+            self.aiSeverity = severity_to_numeric(self.severity)
+        if self.aiConfidence is None:
+            self.aiConfidence = self.confidence
+        if self.aiExplanation is None:
+            self.aiExplanation = self.explanation
 
 class ReportStatusUpdate(BaseModel):
     status: ReportStatus
     adminNotes: Optional[str] = None
+
+class ReportReviewRequest(BaseModel):
+    category: Optional[ReportCategory] = Field(None, description="Admin corrected category")
+    severity: Optional[ReportSeverity] = Field(None, description="Admin corrected severity")
+    status: Optional[ReportStatus] = Field(None, description="Updated workflow state")
+    adminNotes: Optional[str] = Field(None, description="Administrative notes or dispatch details")
 
 class ReportResponse(BaseModel):
     id: str
@@ -208,38 +251,83 @@ class ReportResponse(BaseModel):
     imageUrl: Optional[str] = ""
     latitude: float
     longitude: float
+    userSeverity: Optional[int] = None
+    severity: Optional[ReportSeverity] = None
     aiCategory: ReportCategory
     aiSeverity: int
     aiConfidence: float
     aiExplanation: str
     status: ReportStatus
     adminNotes: Optional[str] = None
+    adminReviewed: bool = False
+    reviewedBy: Optional[str] = None
     createdAt: str
     resolvedAt: Optional[str] = None
     isDemo: bool = True
 
+class ImageUploadResponse(BaseModel):
+    imageUrl: str
+    filename: str
+    sizeBytes: int
+    contentType: str
+    message: str = "Image uploaded successfully"
+
+
+
 # ----------------- Local Providers -----------------
 class LocalProviderBase(BaseModel):
-    destinationId: str
-    name: str
+    destinationId: str = Field(..., min_length=2)
+    name: str = Field(..., min_length=2, max_length=150)
     category: ProviderCategory
-    description: str
-    ownerName: str
-    contactPhone: str
+    description: str = Field(..., min_length=5)
+    ownerName: Optional[str] = "Local Host"
+    contactPhone: str = Field(..., min_length=5)
     contactEmail: Optional[str] = None
-    locationAddress: str
-    latitude: float
-    longitude: float
-    priceStartingINR: float
-    pricingUnit: str
+    locationAddress: str = Field(..., min_length=2)
+    latitude: float = Field(..., ge=-90.0, le=90.0)
+    longitude: float = Field(..., ge=-180.0, le=180.0)
+    priceStartingINR: float = Field(..., ge=0.0)
+    pricingUnit: str = "per unit"
     verified: bool = True
     externalBookingUrl: Optional[str] = ""
     imageUrl: Optional[str] = ""
-    rating: float = 4.8
+    rating: float = Field(default=4.8, ge=0.0, le=5.0)
+    reviewCount: int = Field(default=24, ge=0)
     isDemo: bool = True
+    disclaimer: str = "Synthetic demo provider for regional economic empowerment demonstration (not a real commercial business)."
+    price: Optional[float] = None
+    location: Optional[str] = None
+    contact: Optional[str] = None
+
+    def model_post_init(self, __context: Any) -> None:
+        if self.price is None:
+            self.price = self.priceStartingINR
+        if self.location is None:
+            self.location = self.locationAddress
+        if self.contact is None:
+            self.contact = self.contactPhone
 
 class LocalProviderCreate(LocalProviderBase):
     id: Optional[str] = None
+
+class LocalProviderUpdate(BaseModel):
+    name: Optional[str] = None
+    category: Optional[ProviderCategory] = None
+    description: Optional[str] = None
+    destinationId: Optional[str] = None
+    ownerName: Optional[str] = None
+    contactPhone: Optional[str] = None
+    contactEmail: Optional[str] = None
+    locationAddress: Optional[str] = None
+    latitude: Optional[float] = None
+    longitude: Optional[float] = None
+    priceStartingINR: Optional[float] = None
+    pricingUnit: Optional[str] = None
+    verified: Optional[bool] = None
+    externalBookingUrl: Optional[str] = None
+    imageUrl: Optional[str] = None
+    rating: Optional[float] = None
+    reviewCount: Optional[int] = None
 
 class LocalProviderResponse(LocalProviderBase):
     id: str
@@ -323,6 +411,43 @@ class DistrictPressureMetric(BaseModel):
     destinationsCount: int
     criticalCount: int
 
+class DailyPressurePoint(BaseModel):
+    date: str
+    avgPressure: float
+    highPressureCount: int
+    criticalCount: int
+
+class DestinationPressureMetric(BaseModel):
+    destinationId: str
+    name: str
+    district: str
+    pressureScore: float
+    status: PressureStatus
+    currentVisitors: int
+    capacity: int
+    loadPercentage: float
+
+class DestinationFactorMetric(BaseModel):
+    destinationId: str
+    name: str
+    district: str
+    tourism: float
+    water: float
+    waste: float
+    traffic: float
+    environment: float
+    compositeScore: float
+
+class PredictionComparisonMetric(BaseModel):
+    destinationId: str
+    name: str
+    district: str
+    currentPressure: float
+    predictedPressure: float
+    delta: float
+    riskLevel: str
+    primaryRiskFactor: str
+
 class AdminAnalyticsResponse(BaseModel):
     totalDestinations: int
     highPressureDestinations: int
@@ -334,3 +459,47 @@ class AdminAnalyticsResponse(BaseModel):
     districtSummaries: List[DistrictPressureMetric]
     categoryDistribution: Dict[str, int]
     recentCriticalIncidents: List[ReportResponse]
+    # 9 Granular Analytics Dimensions
+    regionalPressureTrend: List[DailyPressurePoint] = Field(default_factory=list)
+    destinationPressureComparison: List[DestinationPressureMetric] = Field(default_factory=list)
+    pressureFactorComparison: List[DestinationFactorMetric] = Field(default_factory=list)
+    reportCategoryDistribution: Dict[str, int] = Field(default_factory=dict)
+    reportSeverityDistribution: Dict[str, int] = Field(default_factory=dict)
+    reportStatusDistribution: Dict[str, int] = Field(default_factory=dict)
+    providerCategoryDistribution: Dict[str, int] = Field(default_factory=dict)
+    tourismPressureTrends: List[DestinationPressureMetric] = Field(default_factory=list)
+    predictionVsCurrent: List[PredictionComparisonMetric] = Field(default_factory=list)
+
+# ----------------- Notifications -----------------
+class NotificationCreate(BaseModel):
+    userId: Optional[str] = None
+    title: str = Field(..., min_length=2, max_length=150)
+    message: str = Field(..., min_length=5)
+    type: NotificationType
+    relatedEntityId: Optional[str] = None
+    relatedEntityType: Optional[str] = None
+    targetRole: Optional[UserRole] = None
+    metadata: Dict[str, Any] = Field(default_factory=dict)
+
+class NotificationResponse(BaseModel):
+    id: str
+    userId: Optional[str] = None
+    title: str
+    message: str
+    type: NotificationType
+    read: bool = False
+    createdAt: str
+    relatedEntityId: Optional[str] = None
+    relatedEntityType: Optional[str] = None
+    targetRole: Optional[UserRole] = None
+    metadata: Dict[str, Any] = Field(default_factory=dict)
+
+class NotificationUnreadCountResponse(BaseModel):
+    unreadCount: int
+    totalCount: int
+
+class NotificationBulkReadResponse(BaseModel):
+    success: bool
+    markedCount: int
+    message: str
+

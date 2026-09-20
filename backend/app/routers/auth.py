@@ -11,14 +11,15 @@ router = APIRouter(prefix="/auth", tags=["Authentication & User Roles"])
 def sync_user(user: UserCreate, auth_info: AuthTokenInfo = Depends(get_current_user_info)):
     """
     Called after Firebase Auth login to synchronize the user document in Firestore.
-    Ensures the calling UID matches the authenticated token.
+    Ensures the calling UID matches the authenticated token and prevents unprivileged role escalation.
     """
-    if auth_info.uid != user.uid and auth_info.role != UserRole.ADMIN:
+    is_admin = (auth_info.role == UserRole.ADMIN)
+    if auth_info.uid != user.uid and not is_admin:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Cannot sync profile for another user ID"
         )
-    return user_service.sync_user(user)
+    return user_service.sync_user(user, caller_is_admin=is_admin)
 
 @router.get("/me", response_model=UserProfileResponse)
 def get_current_profile(auth_info: AuthTokenInfo = Depends(get_current_user_info)):

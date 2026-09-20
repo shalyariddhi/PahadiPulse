@@ -66,3 +66,33 @@ def test_user_sync_security():
     }
     res = client.post("/api/auth/sync-user", json=malicious_payload, headers=headers)
     assert res.status_code == 403
+
+def test_prevent_self_role_escalation():
+    """Non-admin user self-sync cannot elevate their own role to admin."""
+    headers = {"Authorization": "Bearer tourist-token-demo"}
+    escalation_payload = {
+        "uid": "tourist_demo_user",
+        "email": "tourist@pahadipulse.in",
+        "displayName": "Sneaky User",
+        "role": "admin"  # attempting to self-promote to admin
+    }
+    res = client.post("/api/auth/sync-user", json=escalation_payload, headers=headers)
+    assert res.status_code == 200
+    # Must remain tourist, role elevation prevented
+    assert res.json()["role"] == "tourist"
+
+def test_security_headers():
+    """Verify HTTP security headers are injected in all responses."""
+    res = client.get("/api/health")
+    assert res.status_code == 200
+    assert res.headers.get("X-Content-Type-Options") == "nosniff"
+    assert res.headers.get("X-Frame-Options") == "DENY"
+    assert res.headers.get("X-XSS-Protection") == "1; mode=block"
+
+def test_spoofed_image_magic_bytes_rejected():
+    """Test that a text/php file renamed as .jpg with wrong magic bytes is rejected."""
+    fake_jpeg = b"<?php echo 'malicious'; ?>"  # Does NOT start with \xff\xd8\xff
+    files = {"file": ("exploit.jpg", fake_jpeg, "image/jpeg")}
+    res = client.post("/api/reports/upload-image", files=files)
+    assert res.status_code == 400
+    assert "binary header" in res.json()["detail"].lower()

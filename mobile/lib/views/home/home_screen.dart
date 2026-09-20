@@ -10,6 +10,7 @@ import '../map/map_screen.dart';
 import '../notifications/notifications_screen.dart';
 import '../saved/saved_destinations_screen.dart';
 import '../experiences/experiences_screen.dart';
+import '../experiences/provider_detail_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -95,7 +96,28 @@ class HomeScreen extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: const Icon(LucideIcons.bell, color: AppColors.textPrimary),
+            icon: Stack(
+              children: [
+                const Icon(LucideIcons.bell, color: AppColors.textPrimary),
+                if (appState.unreadNotificationsCount > 0)
+                  Positioned(
+                    right: 0,
+                    top: 0,
+                    child: Container(
+                      padding: const EdgeInsets.all(3),
+                      decoration: const BoxDecoration(
+                        color: AppColors.roseAlert,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Text(
+                        '${appState.unreadNotificationsCount}',
+                        style: const TextStyle(color: Colors.white, fontSize: 9, fontWeight: FontWeight.w900),
+                      ),
+                    ),
+                  )
+              ],
+            ),
+            tooltip: 'Alerts',
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(builder: (_) => const NotificationsScreen()),
@@ -561,58 +583,81 @@ class HomeScreen extends StatelessWidget {
       );
     }
 
+    IconData _providerIcon(String cat) {
+      switch (cat.toUpperCase()) {
+        case 'HOMESTAY': return LucideIcons.home;
+        case 'LOCAL_GUIDE': return LucideIcons.compass;
+        case 'LOCAL_FOOD': return LucideIcons.utensils;
+        case 'HANDICRAFTS': return LucideIcons.scissors;
+        case 'LOCAL_PRODUCTS': return LucideIcons.shoppingBag;
+        case 'CULTURAL_EXPERIENCE': return LucideIcons.music;
+        case 'RENTAL': return LucideIcons.bike;
+        default: return LucideIcons.sparkles;
+      }
+    }
+
     return Column(
       children: provs.map((p) {
-        return Container(
-          margin: const EdgeInsets.only(bottom: 12),
-          padding: const EdgeInsets.all(14),
-          decoration: BoxDecoration(
-            color: AppColors.forestCard,
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: AppColors.borderSubtle),
-          ),
-          child: Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: AppColors.forestGlow,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Icon(
-                  p.isHomestay ? LucideIcons.home : (p.isGuide ? LucideIcons.compass : LucideIcons.utensils),
-                  color: AppColors.forestAccent,
-                  size: 22,
-                ),
+        return GestureDetector(
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => ProviderDetailScreen(provider: p),
               ),
-              const SizedBox(width: 14),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Text(
-                            p.name,
-                            style: const TextStyle(color: AppColors.textPrimary, fontWeight: FontWeight.w700, fontSize: 13),
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
+            );
+          },
+          child: Container(
+            margin: const EdgeInsets.only(bottom: 12),
+            padding: const EdgeInsets.all(14),
+            decoration: BoxDecoration(
+              color: AppColors.forestCard,
+              borderRadius: BorderRadius.circular(14),
+              border: Border.all(color: AppColors.borderSubtle),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: AppColors.forestGlow,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Icon(
+                    _providerIcon(p.category),
+                    color: AppColors.forestAccent,
+                    size: 22,
+                  ),
+                ),
+                const SizedBox(width: 14),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              p.name,
+                              style: const TextStyle(color: AppColors.textPrimary, fontWeight: FontWeight.w700, fontSize: 13),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
                           ),
-                        ),
-                        if (p.isCertified)
-                          const Icon(LucideIcons.checkCircle, color: AppColors.forestAccent, size: 14),
-                      ],
-                    ),
-                    const SizedBox(height: 2),
-                    Text(
-                      '${p.destinationName} • Starting ₹${p.priceStartingINR.toInt()}',
-                      style: const TextStyle(color: AppColors.pineTeal, fontSize: 11, fontWeight: FontWeight.w600),
-                    ),
-                  ],
+                          if (p.isCertified)
+                            const Icon(LucideIcons.checkCircle, color: AppColors.forestAccent, size: 14),
+                        ],
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        '${p.destinationName} • ${p.categoryLabel} • ₹${p.priceStartingINR.toInt()}',
+                        style: const TextStyle(color: AppColors.pineTeal, fontSize: 11, fontWeight: FontWeight.w600),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+                const Icon(LucideIcons.chevronRight, size: 16, color: AppColors.textMuted),
+              ],
+            ),
           ),
         );
       }).toList(),

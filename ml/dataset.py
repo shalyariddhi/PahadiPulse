@@ -72,5 +72,11 @@ REPORTS_DATASET: List[Tuple[str, str, int]] = [
     ("Forest fire smoke spotted spreading towards pine ridge in Almora", "ENVIRONMENT", 5),
     ("Illegal tree felling in reserved oak forest near Binsar sanctuary", "ENVIRONMENT", 4),
     ("Flash flood warning in local ravine after cloudburst upstream", "ENVIRONMENT", 5),
-    ("Slope instability and active soil erosion threatening mountain houses", "ENVIRONMENT", 4)
+    ("Slope instability and active soil erosion threatening mountain houses", "ENVIRONMENT", 4),
+
+    # OTHER
+    ("Street light pole flickering and dark on market bypass footpath", "OTHER", 2),
+    ("Broken public park bench and damaged railing near viewpoint", "OTHER", 2),
+    ("Stray cattle blocking pedestrian promenade path", "OTHER", 1),
+    ("Public directional signboard fallen and unreadable near junction", "OTHER", 1)
 ]

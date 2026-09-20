@@ -15,6 +15,17 @@ class ItineraryActivity {
     required this.costEstimateINR,
   });
 
+  Map<String, dynamic> toJson() {
+    return {
+      'time': time,
+      'title': title,
+      'description': description,
+      'category': category,
+      'providerName': providerName,
+      'costEstimateINR': costEstimateINR,
+    };
+  }
+
   factory ItineraryActivity.fromJson(Map<String, dynamic> json) {
     return ItineraryActivity(
       time: json['time'] ?? '',
@@ -39,6 +50,15 @@ class ItineraryStay {
     required this.costPerNightINR,
     this.bookingContact,
   });
+
+  Map<String, dynamic> toJson() {
+    return {
+      'name': name,
+      'type': type,
+      'costPerNightINR': costPerNightINR,
+      'bookingContact': bookingContact,
+    };
+  }
 
   factory ItineraryStay.fromJson(Map<String, dynamic> json) {
     return ItineraryStay(
@@ -72,6 +92,20 @@ class ItineraryDay {
     required this.activities,
     required this.travelNote,
   });
+
+  Map<String, dynamic> toJson() {
+    return {
+      'dayNumber': dayNumber,
+      'destinationId': destinationId,
+      'destinationName': destinationName,
+      'district': district,
+      'pressureLevel': pressureLevel,
+      'pressureScore': pressureScore,
+      'stayRecommendation': stayRecommendation.toJson(),
+      'activities': activities.map((a) => a.toJson()).toList(),
+      'travelNote': travelNote,
+    };
+  }
 
   factory ItineraryDay.fromJson(Map<String, dynamic> json) {
     return ItineraryDay(
@@ -116,6 +150,22 @@ class GeneratedItinerary {
     required this.rationale,
     required this.days,
   });
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'title': title,
+      'daysCount': daysCount,
+      'travellersCount': travellersCount,
+      'budgetPerPersonINR': budgetPerPersonINR,
+      'totalEstimatedCostINR': totalEstimatedCostINR,
+      'pressureMitigationScore': pressureMitigationScore,
+      'interests': interests,
+      'startingRegion': startingRegion,
+      'rationale': rationale,
+      'days': days.map((d) => d.toJson()).toList(),
+    };
+  }
 
   factory GeneratedItinerary.fromJson(Map<String, dynamic> json) {
     return GeneratedItinerary(

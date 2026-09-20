@@ -6,30 +6,34 @@ from app.models.schemas import UserCreate, UserUpdate, UserProfileResponse
 
 class UserService:
     @staticmethod
-    def sync_user(user_data: UserCreate) -> UserProfileResponse:
+    def sync_user(user_data: UserCreate, caller_is_admin: bool = False) -> UserProfileResponse:
         """
         Synchronizes or creates a user profile in Firestore upon Firebase login.
+        Prevents privilege escalation: non-admins cannot self-assign ADMIN or CITIZEN role.
         """
         existing = db.get_by_id("users", user_data.uid)
         now = datetime.now(timezone.utc).isoformat() + "Z"
 
         if existing:
-            # Preserve existing role and createdAt
+            # Preserve existing server-side role unless updated by verified admin
+            assigned_role = user_data.role if caller_is_admin else existing.get("role", UserRole.TOURIST)
             existing["email"] = user_data.email
             existing["displayName"] = user_data.displayName or existing.get("displayName", "PahadiPulse Member")
             if user_data.phoneNumber:
                 existing["phoneNumber"] = user_data.phoneNumber
+            existing["role"] = assigned_role
             existing["updatedAt"] = now
             saved = db.save("users", user_data.uid, existing)
             return UserProfileResponse(**saved)
 
-        # Create new user record
+        # Create new user record (defaults to TOURIST unless provisioned by admin)
+        initial_role = user_data.role if caller_is_admin else UserRole.TOURIST
         doc = {
             "uid": user_data.uid,
             "id": user_data.uid,
             "email": user_data.email,
             "displayName": user_data.displayName or "PahadiPulse Member",
-            "role": user_data.role or UserRole.TOURIST,
+            "role": initial_role,
             "phoneNumber": user_data.phoneNumber,
             "photoUrl": "",
             "isBlocked": False,

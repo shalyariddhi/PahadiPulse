@@ -65,29 +65,52 @@ class FirebaseManager:
         return os.path.join(self.data_dir, f"{collection_name}.json")
 
     def get_all(self, collection_name: str) -> List[Dict[str, Any]]:
-        # If connected to Firestore, query live cloud collection
+        # Load local seed/cached data
+        file_path = self._get_collection_path(collection_name)
+        local_items = []
+        if os.path.exists(file_path):
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    local_items = json.load(f)
+            except Exception:
+                local_items = []
+
+        # If connected to Firestore, query live cloud collection and merge with seed
         if self.firestore_client:
             try:
                 docs = self.firestore_client.collection(collection_name).stream()
-                items = [d.to_dict() for d in docs]
+                cloud_items_map = {d.id: d.to_dict() for d in docs}
+                
+                # Sync any missing seed items to cloud (batching / selective)
+                if collection_name == "local_providers":
+                    for local_doc in local_items:
+                        lid = local_doc.get("id")
+                        if lid and (lid not in cloud_items_map or not cloud_items_map[lid].get("externalBookingUrl")):
+                            try:
+                                self.firestore_client.collection(collection_name).document(lid).set(local_doc, merge=True)
+                            except Exception:
+                                pass
+                            cloud_items_map[lid] = local_doc
+                elif not cloud_items_map and local_items:
+                    # Initial cloud seed only if cloud collection is empty
+                    for local_doc in local_items[:50]:
+                        lid = local_doc.get("id")
+                        if lid:
+                            try:
+                                self.firestore_client.collection(collection_name).document(lid).set(local_doc, merge=True)
+                            except Exception:
+                                pass
+                            cloud_items_map[lid] = local_doc
+
+                items = list(cloud_items_map.values())
                 if items:
-                    # Update local cache
-                    file_path = self._get_collection_path(collection_name)
                     with open(file_path, 'w', encoding='utf-8') as f:
                         json.dump(items, f, indent=2, ensure_ascii=False)
                     return items
             except Exception as e:
                 logger.error(f"Firestore get_all failed: {e}. Falling back to local cache.")
 
-        # Local fallback
-        file_path = self._get_collection_path(collection_name)
-        if not os.path.exists(file_path):
-            return []
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        except Exception:
-            return []
+        return local_items
 
     def get_by_id(self, collection_name: str, doc_id: str) -> Optional[Dict[str, Any]]:
         if self.firestore_client:
@@ -95,6 +118,8 @@ class FirebaseManager:
                 doc = self.firestore_client.collection(collection_name).document(doc_id).get()
                 if doc.exists:
                     return doc.to_dict()
+                else:
+                    return None
             except Exception as e:
                 logger.error(f"Firestore get_by_id failed: {e}")
 
@@ -116,18 +141,28 @@ class FirebaseManager:
             except Exception as e:
                 logger.error(f"Firestore save error: {e}")
 
-        # Update local file cache
-        items = self.get_all(collection_name)
+        # Update local file cache directly
+        file_path = self._get_collection_path(collection_name)
+        items = []
+        if os.path.exists(file_path):
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    items = json.load(f)
+            except Exception:
+                items = []
+
         existing_idx = next((idx for idx, item in enumerate(items) if item.get("id") == doc_id), None)
         if existing_idx is not None:
             items[existing_idx] = data
         else:
             items.append(data)
         
-        file_path = self._get_collection_path(collection_name)
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(items, f, indent=2, ensure_ascii=False)
         return data
+
+    def create(self, collection_name: str, doc_id: str, data: Dict[str, Any]) -> Dict[str, Any]:
+        return self.save(collection_name, doc_id, data)
 
     def update(self, collection_name: str, doc_id: str, updates: Dict[str, Any]) -> Optional[Dict[str, Any]]:
         current = self.get_by_id(collection_name, doc_id)
@@ -145,11 +180,16 @@ class FirebaseManager:
             except Exception as e:
                 logger.error(f"Firestore delete error: {e}")
 
-        items = self.get_all(collection_name)
-        new_items = [item for item in items if item.get("id") != doc_id]
         file_path = self._get_collection_path(collection_name)
-        with open(file_path, 'w', encoding='utf-8') as f:
-            json.dump(new_items, f, indent=2, ensure_ascii=False)
+        if os.path.exists(file_path):
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    items = json.load(f)
+                new_items = [item for item in items if item.get("id") != doc_id]
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    json.dump(new_items, f, indent=2, ensure_ascii=False)
+            except Exception:
+                pass
         return True
 
 db = FirebaseManager()

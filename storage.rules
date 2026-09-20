@@ -22,12 +22,12 @@ service firebase.storage {
     // Destination & provider banner images
     match /destinations/{allPaths=**} {
       allow read: if true;
-      allow write: if isAuthenticated() && request.auth.token.role == 'admin';
+      allow write: if isAuthenticated() && request.auth.token.role == 'admin' && isImageBelowLimit();
     }
 
     match /providers/{allPaths=**} {
       allow read: if true;
-      allow write: if isAuthenticated();
+      allow write: if isAuthenticated() && request.auth.token.role == 'admin' && isImageBelowLimit();
     }
 
     // User profile avatars

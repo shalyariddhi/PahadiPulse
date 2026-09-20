@@ -1,5 +1,214 @@
 [
   {
+    "id": "itin_074b8673",
+    "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "tripSummary": null,
+    "daysCount": 4,
+    "travellersCount": 3,
+    "budgetPerPersonINR": 10000.0,
+    "totalEstimatedCostINR": 19900.0,
+    "pressureMitigationScore": 74.4,
+    "economicLocalSharePct": 85.0,
+    "totalTravelTimeHours": 0.0,
+    "interests": [
+      "Nature",
+      "Adventure"
+    ],
+    "travelMode": "CAR",
+    "startingRegion": "Dehradun",
+    "travelDates": null,
+    "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "explanation": null,
+    "warnings": [],
+    "destinations": [],
+    "costBreakdown": null,
+    "rankedDestinations": [],
+    "days": [
+      {
+        "dayNumber": 1,
+        "destinationId": "munsiyari",
+        "destinationName": "Munsiyari",
+        "district": "Pithoragarh",
+        "pressureLevel": "LOW",
+        "pressureScore": 16.1,
+        "stayRecommendation": {
+          "providerId": null,
+          "name": "Traditional Mountain Stay (Munsiyari)",
+          "type": "Eco-Lodge / Local Homestay",
+          "costPerNightINR": 2100.0,
+          "bookingContact": "+91 98765 00000"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Panchachuli Viewpoint",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Birthi Falls",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 2,
+        "destinationId": "kanatal",
+        "destinationName": "Kanatal",
+        "district": "Tehri Garhwal",
+        "pressureLevel": "LOW",
+        "pressureScore": 18.4,
+        "stayRecommendation": {
+          "providerId": "prov_kanatal_01",
+          "name": "Pahadi Soul Homestay & Organic Orchard",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 1800.0,
+          "bookingContact": "+91 98765 43210"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Surkanda Devi Temple",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Kodia Jungle Local Trek & Birding Guides",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Kodia Jungle",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 3,
+        "destinationId": "chakrata",
+        "destinationName": "Chakrata",
+        "district": "Dehradun",
+        "pressureLevel": "LOW",
+        "pressureScore": 20.6,
+        "stayRecommendation": {
+          "providerId": "prov_chakrata_01",
+          "name": "Jaunsari Heritage Homestay",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 1900.0,
+          "bookingContact": "+91 98765 43215"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Tiger Falls",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Deoban Forest",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 4,
+        "destinationId": "chopta",
+        "destinationName": "Chopta",
+        "district": "Rudraprayag",
+        "pressureLevel": "LOW",
+        "pressureScore": 23.3,
+        "stayRecommendation": {
+          "providerId": "prov_chopta_01",
+          "name": "Monal Himalayan Eco-Camps & Stays",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 2100.0,
+          "bookingContact": "+91 98765 43212"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Tungnath Temple",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Tungnath Summit Mountaineering Guides",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Chandrashila Summit",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      }
+    ],
+    "createdAt": "2026-09-20T10:47:28.752631+00:00Z",
+    "updatedAt": "2026-09-20T10:47:28.752755+00:00Z"
+  },
+  {
     "travellersCount": 3,
     "daysCount": 4,
     "id": "itin_0fb388b7",
@@ -187,191 +396,983 @@
     ]
   },
   {
-    "id": "itin_19d0053e",
-    "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
-    "daysCount": 4,
     "travellersCount": 3,
+    "daysCount": 4,
+    "id": "itin_19d0053e",
+    "updatedAt": "2026-09-14T17:21:00.463317+00:00Z",
+    "startingRegion": "Dehradun",
     "budgetPerPersonINR": 10000.0,
-    "totalEstimatedCostINR": 19900.0,
-    "pressureMitigationScore": 74.4,
+    "createdAt": "2026-09-14T17:21:00.463194Z",
     "interests": [
       "Nature",
       "Adventure"
     ],
-    "startingRegion": "Dehradun",
     "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "pressureMitigationScore": 74.4,
+    "totalEstimatedCostINR": 19900.0,
     "days": [
       {
-        "dayNumber": 1,
-        "destinationId": "munsiyari",
-        "destinationName": "Munsiyari",
+        "stayRecommendation": {
+          "type": "Eco-Lodge / Local Homestay",
+          "bookingContact": "+91 98765 00000",
+          "costPerNightINR": 2100.0,
+          "providerId": null,
+          "name": "Traditional Mountain Stay (Munsiyari)"
+        },
         "district": "Pithoragarh",
+        "destinationId": "munsiyari",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "destinationName": "Munsiyari",
         "pressureLevel": "LOW",
         "pressureScore": 16.1,
-        "stayRecommendation": {
-          "providerId": null,
-          "name": "Traditional Mountain Stay (Munsiyari)",
-          "type": "Eco-Lodge / Local Homestay",
-          "costPerNightINR": 2100.0,
-          "bookingContact": "+91 98765 00000"
-        },
+        "dayNumber": 1,
         "activities": [
           {
-            "time": "08:30 AM",
-            "title": "Morning Exploration at Panchachuli Viewpoint",
             "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
-            "category": "Nature & Trekking",
+            "time": "08:30 AM",
             "providerName": "Local Community Trek Guide",
-            "costEstimateINR": 350.0
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Panchachuli Viewpoint",
+            "category": "Nature & Trekking"
           },
           {
-            "time": "01:30 PM",
-            "title": "Organic Pahadi Cuisine Experience",
             "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
-            "category": "Local Food",
+            "time": "01:30 PM",
             "providerName": "Village Community Kitchen",
-            "costEstimateINR": 400.0
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
           },
           {
-            "time": "04:30 PM",
-            "title": "Golden Hour Visit to Birthi Falls",
             "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
-            "category": "Culture & Relaxation",
+            "time": "04:30 PM",
             "providerName": "Pahadi Artisans Guild",
-            "costEstimateINR": 250.0
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Birthi Falls",
+            "category": "Culture & Relaxation"
           }
-        ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor."
+        ]
       },
       {
-        "dayNumber": 2,
-        "destinationId": "kanatal",
-        "destinationName": "Kanatal",
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43210",
+          "costPerNightINR": 1800.0,
+          "providerId": "prov_kanatal_01",
+          "name": "Pahadi Soul Homestay & Organic Orchard"
+        },
         "district": "Tehri Garhwal",
+        "destinationId": "kanatal",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "destinationName": "Kanatal",
         "pressureLevel": "LOW",
         "pressureScore": 18.4,
-        "stayRecommendation": {
-          "providerId": "prov_kanatal_01",
-          "name": "Pahadi Soul Homestay & Organic Orchard",
-          "type": "Verified Village Homestay",
-          "costPerNightINR": 1800.0,
-          "bookingContact": "+91 98765 43210"
-        },
+        "dayNumber": 2,
         "activities": [
           {
-            "time": "08:30 AM",
-            "title": "Morning Exploration at Surkanda Devi Temple",
             "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
-            "category": "Nature & Trekking",
+            "time": "08:30 AM",
             "providerName": "Kodia Jungle Local Trek & Birding Guides",
-            "costEstimateINR": 350.0
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Surkanda Devi Temple",
+            "category": "Nature & Trekking"
           },
           {
-            "time": "01:30 PM",
-            "title": "Organic Pahadi Cuisine Experience",
             "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
-            "category": "Local Food",
+            "time": "01:30 PM",
             "providerName": "Village Community Kitchen",
-            "costEstimateINR": 400.0
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
           },
           {
-            "time": "04:30 PM",
-            "title": "Golden Hour Visit to Kodia Jungle",
             "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
-            "category": "Culture & Relaxation",
+            "time": "04:30 PM",
             "providerName": "Pahadi Artisans Guild",
-            "costEstimateINR": 250.0
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Kodia Jungle",
+            "category": "Culture & Relaxation"
           }
-        ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor."
+        ]
       },
       {
-        "dayNumber": 3,
-        "destinationId": "chakrata",
-        "destinationName": "Chakrata",
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43215",
+          "costPerNightINR": 1900.0,
+          "providerId": "prov_chakrata_01",
+          "name": "Jaunsari Heritage Homestay"
+        },
         "district": "Dehradun",
+        "destinationId": "chakrata",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "destinationName": "Chakrata",
         "pressureLevel": "LOW",
         "pressureScore": 20.6,
-        "stayRecommendation": {
-          "providerId": "prov_chakrata_01",
-          "name": "Jaunsari Heritage Homestay",
-          "type": "Verified Village Homestay",
-          "costPerNightINR": 1900.0,
-          "bookingContact": "+91 98765 43215"
-        },
+        "dayNumber": 3,
         "activities": [
           {
-            "time": "08:30 AM",
-            "title": "Morning Exploration at Tiger Falls",
             "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
-            "category": "Nature & Trekking",
+            "time": "08:30 AM",
             "providerName": "Local Community Trek Guide",
-            "costEstimateINR": 350.0
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tiger Falls",
+            "category": "Nature & Trekking"
           },
           {
-            "time": "01:30 PM",
-            "title": "Organic Pahadi Cuisine Experience",
             "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
-            "category": "Local Food",
+            "time": "01:30 PM",
             "providerName": "Village Community Kitchen",
-            "costEstimateINR": 400.0
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
           },
           {
-            "time": "04:30 PM",
-            "title": "Golden Hour Visit to Deoban Forest",
             "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
-            "category": "Culture & Relaxation",
+            "time": "04:30 PM",
             "providerName": "Pahadi Artisans Guild",
-            "costEstimateINR": 250.0
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Deoban Forest",
+            "category": "Culture & Relaxation"
           }
-        ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor."
+        ]
       },
       {
-        "dayNumber": 4,
-        "destinationId": "chopta",
-        "destinationName": "Chopta",
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43212",
+          "costPerNightINR": 2100.0,
+          "providerId": "prov_chopta_01",
+          "name": "Monal Himalayan Eco-Camps & Stays"
+        },
         "district": "Rudraprayag",
+        "destinationId": "chopta",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "destinationName": "Chopta",
         "pressureLevel": "LOW",
         "pressureScore": 23.3,
-        "stayRecommendation": {
-          "providerId": "prov_chopta_01",
-          "name": "Monal Himalayan Eco-Camps & Stays",
-          "type": "Verified Village Homestay",
-          "costPerNightINR": 2100.0,
-          "bookingContact": "+91 98765 43212"
-        },
+        "dayNumber": 4,
         "activities": [
           {
-            "time": "08:30 AM",
-            "title": "Morning Exploration at Tungnath Temple",
             "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
-            "category": "Nature & Trekking",
+            "time": "08:30 AM",
             "providerName": "Tungnath Summit Mountaineering Guides",
-            "costEstimateINR": 350.0
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tungnath Temple",
+            "category": "Nature & Trekking"
           },
           {
-            "time": "01:30 PM",
-            "title": "Organic Pahadi Cuisine Experience",
             "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
-            "category": "Local Food",
+            "time": "01:30 PM",
             "providerName": "Village Community Kitchen",
-            "costEstimateINR": 400.0
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
           },
           {
-            "time": "04:30 PM",
-            "title": "Golden Hour Visit to Chandrashila Summit",
             "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
-            "category": "Culture & Relaxation",
+            "time": "04:30 PM",
             "providerName": "Pahadi Artisans Guild",
-            "costEstimateINR": 250.0
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Chandrashila Summit",
+            "category": "Culture & Relaxation"
           }
-        ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "itin_1fec302a",
+    "startingRegion": "Dehradun",
+    "warnings": [],
+    "totalTravelTimeHours": 0.0,
+    "explanation": null,
+    "budgetPerPersonINR": 10000.0,
+    "interests": [
+      "Nature",
+      "Adventure"
+    ],
+    "tripSummary": null,
+    "rankedDestinations": [],
+    "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "totalEstimatedCostINR": 19900.0,
+    "pressureMitigationScore": 74.4,
+    "days": [
+      {
+        "stayRecommendation": {
+          "type": "Eco-Lodge / Local Homestay",
+          "bookingContact": "+91 98765 00000",
+          "costPerNightINR": 2100.0,
+          "providerId": null,
+          "name": "Traditional Mountain Stay (Munsiyari)"
+        },
+        "district": "Pithoragarh",
+        "distanceKmFromPrev": 0.0,
+        "destinationId": "munsiyari",
+        "travelTimeFromPrevHours": 0.0,
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "destinationName": "Munsiyari",
+        "selectionReason": null,
+        "pressureLevel": "LOW",
+        "pressureScore": 16.1,
+        "dayNumber": 1,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Panchachuli Viewpoint",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Birthi Falls",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43210",
+          "costPerNightINR": 1800.0,
+          "providerId": "prov_kanatal_01",
+          "name": "Pahadi Soul Homestay & Organic Orchard"
+        },
+        "district": "Tehri Garhwal",
+        "distanceKmFromPrev": 0.0,
+        "destinationId": "kanatal",
+        "travelTimeFromPrevHours": 0.0,
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "destinationName": "Kanatal",
+        "selectionReason": null,
+        "pressureLevel": "LOW",
+        "pressureScore": 18.4,
+        "dayNumber": 2,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Kodia Jungle Local Trek & Birding Guides",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Surkanda Devi Temple",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Kodia Jungle",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43215",
+          "costPerNightINR": 1900.0,
+          "providerId": "prov_chakrata_01",
+          "name": "Jaunsari Heritage Homestay"
+        },
+        "district": "Dehradun",
+        "distanceKmFromPrev": 0.0,
+        "destinationId": "chakrata",
+        "travelTimeFromPrevHours": 0.0,
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "destinationName": "Chakrata",
+        "selectionReason": null,
+        "pressureLevel": "LOW",
+        "pressureScore": 20.6,
+        "dayNumber": 3,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tiger Falls",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Deoban Forest",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43212",
+          "costPerNightINR": 2100.0,
+          "providerId": "prov_chopta_01",
+          "name": "Monal Himalayan Eco-Camps & Stays"
+        },
+        "district": "Rudraprayag",
+        "distanceKmFromPrev": 0.0,
+        "destinationId": "chopta",
+        "travelTimeFromPrevHours": 0.0,
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "destinationName": "Chopta",
+        "selectionReason": null,
+        "pressureLevel": "LOW",
+        "pressureScore": 23.3,
+        "dayNumber": 4,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Tungnath Summit Mountaineering Guides",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tungnath Temple",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Chandrashila Summit",
+            "category": "Culture & Relaxation"
+          }
+        ]
       }
     ],
-    "createdAt": "2026-09-14T17:21:00.463194Z",
-    "updatedAt": "2026-09-14T17:21:00.463317+00:00Z"
+    "travellersCount": 3,
+    "destinations": [],
+    "updatedAt": "2026-09-20T10:44:01.851407+00:00Z",
+    "costBreakdown": null,
+    "daysCount": 4,
+    "economicLocalSharePct": 85.0,
+    "travelDates": null,
+    "createdAt": "2026-09-20T10:44:01.851229+00:00Z",
+    "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "travelMode": "CAR"
+  },
+  {
+    "travellersCount": 3,
+    "daysCount": 4,
+    "id": "itin_282cd010",
+    "updatedAt": "2026-09-14T17:32:29.209681+00:00Z",
+    "startingRegion": "Dehradun",
+    "budgetPerPersonINR": 10000.0,
+    "createdAt": "2026-09-14T17:32:29.209545Z",
+    "interests": [
+      "Nature",
+      "Adventure"
+    ],
+    "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "pressureMitigationScore": 74.4,
+    "totalEstimatedCostINR": 19900.0,
+    "days": [
+      {
+        "stayRecommendation": {
+          "type": "Eco-Lodge / Local Homestay",
+          "bookingContact": "+91 98765 00000",
+          "costPerNightINR": 2100.0,
+          "providerId": null,
+          "name": "Traditional Mountain Stay (Munsiyari)"
+        },
+        "district": "Pithoragarh",
+        "destinationId": "munsiyari",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "destinationName": "Munsiyari",
+        "pressureLevel": "LOW",
+        "pressureScore": 16.1,
+        "dayNumber": 1,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Panchachuli Viewpoint",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Birthi Falls",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43210",
+          "costPerNightINR": 1800.0,
+          "providerId": "prov_kanatal_01",
+          "name": "Pahadi Soul Homestay & Organic Orchard"
+        },
+        "district": "Tehri Garhwal",
+        "destinationId": "kanatal",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "destinationName": "Kanatal",
+        "pressureLevel": "LOW",
+        "pressureScore": 18.4,
+        "dayNumber": 2,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Kodia Jungle Local Trek & Birding Guides",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Surkanda Devi Temple",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Kodia Jungle",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43215",
+          "costPerNightINR": 1900.0,
+          "providerId": "prov_chakrata_01",
+          "name": "Jaunsari Heritage Homestay"
+        },
+        "district": "Dehradun",
+        "destinationId": "chakrata",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "destinationName": "Chakrata",
+        "pressureLevel": "LOW",
+        "pressureScore": 20.6,
+        "dayNumber": 3,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tiger Falls",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Deoban Forest",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43212",
+          "costPerNightINR": 2100.0,
+          "providerId": "prov_chopta_01",
+          "name": "Monal Himalayan Eco-Camps & Stays"
+        },
+        "district": "Rudraprayag",
+        "destinationId": "chopta",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "destinationName": "Chopta",
+        "pressureLevel": "LOW",
+        "pressureScore": 23.3,
+        "dayNumber": 4,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Tungnath Summit Mountaineering Guides",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tungnath Temple",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Chandrashila Summit",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travellersCount": 3,
+    "daysCount": 4,
+    "id": "itin_38c7fe5c",
+    "updatedAt": "2026-09-14T17:37:15.432379+00:00Z",
+    "startingRegion": "Dehradun",
+    "budgetPerPersonINR": 10000.0,
+    "createdAt": "2026-09-14T17:37:15.432025Z",
+    "interests": [
+      "Nature",
+      "Adventure"
+    ],
+    "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "pressureMitigationScore": 74.4,
+    "totalEstimatedCostINR": 19900.0,
+    "days": [
+      {
+        "stayRecommendation": {
+          "type": "Eco-Lodge / Local Homestay",
+          "bookingContact": "+91 98765 00000",
+          "costPerNightINR": 2100.0,
+          "providerId": null,
+          "name": "Traditional Mountain Stay (Munsiyari)"
+        },
+        "district": "Pithoragarh",
+        "destinationId": "munsiyari",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "destinationName": "Munsiyari",
+        "pressureLevel": "LOW",
+        "pressureScore": 16.1,
+        "dayNumber": 1,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Panchachuli Viewpoint",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Birthi Falls",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43210",
+          "costPerNightINR": 1800.0,
+          "providerId": "prov_kanatal_01",
+          "name": "Pahadi Soul Homestay & Organic Orchard"
+        },
+        "district": "Tehri Garhwal",
+        "destinationId": "kanatal",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "destinationName": "Kanatal",
+        "pressureLevel": "LOW",
+        "pressureScore": 18.4,
+        "dayNumber": 2,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Kodia Jungle Local Trek & Birding Guides",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Surkanda Devi Temple",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Kodia Jungle",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43215",
+          "costPerNightINR": 1900.0,
+          "providerId": "prov_chakrata_01",
+          "name": "Jaunsari Heritage Homestay"
+        },
+        "district": "Dehradun",
+        "destinationId": "chakrata",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "destinationName": "Chakrata",
+        "pressureLevel": "LOW",
+        "pressureScore": 20.6,
+        "dayNumber": 3,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tiger Falls",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Deoban Forest",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43212",
+          "costPerNightINR": 2100.0,
+          "providerId": "prov_chopta_01",
+          "name": "Monal Himalayan Eco-Camps & Stays"
+        },
+        "district": "Rudraprayag",
+        "destinationId": "chopta",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "destinationName": "Chopta",
+        "pressureLevel": "LOW",
+        "pressureScore": 23.3,
+        "dayNumber": 4,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Tungnath Summit Mountaineering Guides",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tungnath Temple",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Chandrashila Summit",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "itin_40a39df2",
+    "startingRegion": "Dehradun",
+    "warnings": [],
+    "totalTravelTimeHours": 0.0,
+    "explanation": null,
+    "budgetPerPersonINR": 10000.0,
+    "interests": [
+      "Nature",
+      "Adventure"
+    ],
+    "tripSummary": null,
+    "rankedDestinations": [],
+    "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "totalEstimatedCostINR": 19900.0,
+    "pressureMitigationScore": 74.4,
+    "days": [
+      {
+        "stayRecommendation": {
+          "type": "Eco-Lodge / Local Homestay",
+          "bookingContact": "+91 98765 00000",
+          "costPerNightINR": 2100.0,
+          "providerId": null,
+          "name": "Traditional Mountain Stay (Munsiyari)"
+        },
+        "district": "Pithoragarh",
+        "distanceKmFromPrev": 0.0,
+        "destinationId": "munsiyari",
+        "travelTimeFromPrevHours": 0.0,
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "destinationName": "Munsiyari",
+        "selectionReason": null,
+        "pressureLevel": "LOW",
+        "pressureScore": 16.1,
+        "dayNumber": 1,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Panchachuli Viewpoint",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Birthi Falls",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43210",
+          "costPerNightINR": 1800.0,
+          "providerId": "prov_kanatal_01",
+          "name": "Pahadi Soul Homestay & Organic Orchard"
+        },
+        "district": "Tehri Garhwal",
+        "distanceKmFromPrev": 0.0,
+        "destinationId": "kanatal",
+        "travelTimeFromPrevHours": 0.0,
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "destinationName": "Kanatal",
+        "selectionReason": null,
+        "pressureLevel": "LOW",
+        "pressureScore": 18.4,
+        "dayNumber": 2,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Kodia Jungle Local Trek & Birding Guides",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Surkanda Devi Temple",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Kodia Jungle",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43215",
+          "costPerNightINR": 1900.0,
+          "providerId": "prov_chakrata_01",
+          "name": "Jaunsari Heritage Homestay"
+        },
+        "district": "Dehradun",
+        "distanceKmFromPrev": 0.0,
+        "destinationId": "chakrata",
+        "travelTimeFromPrevHours": 0.0,
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "destinationName": "Chakrata",
+        "selectionReason": null,
+        "pressureLevel": "LOW",
+        "pressureScore": 20.6,
+        "dayNumber": 3,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tiger Falls",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Deoban Forest",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43212",
+          "costPerNightINR": 2100.0,
+          "providerId": "prov_chopta_01",
+          "name": "Monal Himalayan Eco-Camps & Stays"
+        },
+        "district": "Rudraprayag",
+        "distanceKmFromPrev": 0.0,
+        "destinationId": "chopta",
+        "travelTimeFromPrevHours": 0.0,
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "destinationName": "Chopta",
+        "selectionReason": null,
+        "pressureLevel": "LOW",
+        "pressureScore": 23.3,
+        "dayNumber": 4,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Tungnath Summit Mountaineering Guides",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tungnath Temple",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Chandrashila Summit",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      }
+    ],
+    "travellersCount": 3,
+    "destinations": [],
+    "updatedAt": "2026-09-16T18:45:06.659650+00:00Z",
+    "costBreakdown": null,
+    "daysCount": 4,
+    "economicLocalSharePct": 85.0,
+    "travelDates": null,
+    "createdAt": "2026-09-16T18:45:06.659422+00:00Z",
+    "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "travelMode": "CAR"
   },
   {
     "travellersCount": 3,
@@ -381,6 +1382,776 @@
     "startingRegion": "Dehradun",
     "budgetPerPersonINR": 10000.0,
     "createdAt": "2026-09-14T17:20:19.908548Z",
+    "interests": [
+      "Nature",
+      "Adventure"
+    ],
+    "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "pressureMitigationScore": 74.4,
+    "totalEstimatedCostINR": 19900.0,
+    "days": [
+      {
+        "stayRecommendation": {
+          "type": "Eco-Lodge / Local Homestay",
+          "bookingContact": "+91 98765 00000",
+          "costPerNightINR": 2100.0,
+          "providerId": null,
+          "name": "Traditional Mountain Stay (Munsiyari)"
+        },
+        "district": "Pithoragarh",
+        "destinationId": "munsiyari",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "destinationName": "Munsiyari",
+        "pressureLevel": "LOW",
+        "pressureScore": 16.1,
+        "dayNumber": 1,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Panchachuli Viewpoint",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Birthi Falls",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43210",
+          "costPerNightINR": 1800.0,
+          "providerId": "prov_kanatal_01",
+          "name": "Pahadi Soul Homestay & Organic Orchard"
+        },
+        "district": "Tehri Garhwal",
+        "destinationId": "kanatal",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "destinationName": "Kanatal",
+        "pressureLevel": "LOW",
+        "pressureScore": 18.4,
+        "dayNumber": 2,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Kodia Jungle Local Trek & Birding Guides",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Surkanda Devi Temple",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Kodia Jungle",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43215",
+          "costPerNightINR": 1900.0,
+          "providerId": "prov_chakrata_01",
+          "name": "Jaunsari Heritage Homestay"
+        },
+        "district": "Dehradun",
+        "destinationId": "chakrata",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "destinationName": "Chakrata",
+        "pressureLevel": "LOW",
+        "pressureScore": 20.6,
+        "dayNumber": 3,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tiger Falls",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Deoban Forest",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43212",
+          "costPerNightINR": 2100.0,
+          "providerId": "prov_chopta_01",
+          "name": "Monal Himalayan Eco-Camps & Stays"
+        },
+        "district": "Rudraprayag",
+        "destinationId": "chopta",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "destinationName": "Chopta",
+        "pressureLevel": "LOW",
+        "pressureScore": 23.3,
+        "dayNumber": 4,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Tungnath Summit Mountaineering Guides",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tungnath Temple",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Chandrashila Summit",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travellersCount": 3,
+    "daysCount": 4,
+    "id": "itin_638161d3",
+    "updatedAt": "2026-09-14T17:31:29.030353+00:00Z",
+    "startingRegion": "Dehradun",
+    "budgetPerPersonINR": 10000.0,
+    "createdAt": "2026-09-14T17:31:29.030223Z",
+    "interests": [
+      "Nature",
+      "Adventure"
+    ],
+    "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "pressureMitigationScore": 74.4,
+    "totalEstimatedCostINR": 19900.0,
+    "days": [
+      {
+        "stayRecommendation": {
+          "type": "Eco-Lodge / Local Homestay",
+          "bookingContact": "+91 98765 00000",
+          "costPerNightINR": 2100.0,
+          "providerId": null,
+          "name": "Traditional Mountain Stay (Munsiyari)"
+        },
+        "district": "Pithoragarh",
+        "destinationId": "munsiyari",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "destinationName": "Munsiyari",
+        "pressureLevel": "LOW",
+        "pressureScore": 16.1,
+        "dayNumber": 1,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Panchachuli Viewpoint",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Birthi Falls",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43210",
+          "costPerNightINR": 1800.0,
+          "providerId": "prov_kanatal_01",
+          "name": "Pahadi Soul Homestay & Organic Orchard"
+        },
+        "district": "Tehri Garhwal",
+        "destinationId": "kanatal",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "destinationName": "Kanatal",
+        "pressureLevel": "LOW",
+        "pressureScore": 18.4,
+        "dayNumber": 2,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Kodia Jungle Local Trek & Birding Guides",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Surkanda Devi Temple",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Kodia Jungle",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43215",
+          "costPerNightINR": 1900.0,
+          "providerId": "prov_chakrata_01",
+          "name": "Jaunsari Heritage Homestay"
+        },
+        "district": "Dehradun",
+        "destinationId": "chakrata",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "destinationName": "Chakrata",
+        "pressureLevel": "LOW",
+        "pressureScore": 20.6,
+        "dayNumber": 3,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tiger Falls",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Deoban Forest",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43212",
+          "costPerNightINR": 2100.0,
+          "providerId": "prov_chopta_01",
+          "name": "Monal Himalayan Eco-Camps & Stays"
+        },
+        "district": "Rudraprayag",
+        "destinationId": "chopta",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "destinationName": "Chopta",
+        "pressureLevel": "LOW",
+        "pressureScore": 23.3,
+        "dayNumber": 4,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Tungnath Summit Mountaineering Guides",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tungnath Temple",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Chandrashila Summit",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "itin_66dd7077",
+    "startingRegion": "Dehradun",
+    "warnings": [],
+    "totalTravelTimeHours": 0.0,
+    "explanation": null,
+    "budgetPerPersonINR": 10000.0,
+    "interests": [
+      "Nature",
+      "Adventure"
+    ],
+    "tripSummary": null,
+    "rankedDestinations": [],
+    "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "totalEstimatedCostINR": 19900.0,
+    "pressureMitigationScore": 74.4,
+    "days": [
+      {
+        "stayRecommendation": {
+          "type": "Eco-Lodge / Local Homestay",
+          "bookingContact": "+91 98765 00000",
+          "costPerNightINR": 2100.0,
+          "providerId": null,
+          "name": "Traditional Mountain Stay (Munsiyari)"
+        },
+        "district": "Pithoragarh",
+        "distanceKmFromPrev": 0.0,
+        "destinationId": "munsiyari",
+        "travelTimeFromPrevHours": 0.0,
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "destinationName": "Munsiyari",
+        "selectionReason": null,
+        "pressureLevel": "LOW",
+        "pressureScore": 16.1,
+        "dayNumber": 1,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Panchachuli Viewpoint",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Birthi Falls",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43210",
+          "costPerNightINR": 1800.0,
+          "providerId": "prov_kanatal_01",
+          "name": "Pahadi Soul Homestay & Organic Orchard"
+        },
+        "district": "Tehri Garhwal",
+        "distanceKmFromPrev": 0.0,
+        "destinationId": "kanatal",
+        "travelTimeFromPrevHours": 0.0,
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "destinationName": "Kanatal",
+        "selectionReason": null,
+        "pressureLevel": "LOW",
+        "pressureScore": 18.4,
+        "dayNumber": 2,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Kodia Jungle Local Trek & Birding Guides",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Surkanda Devi Temple",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Kodia Jungle",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43215",
+          "costPerNightINR": 1900.0,
+          "providerId": "prov_chakrata_01",
+          "name": "Jaunsari Heritage Homestay"
+        },
+        "district": "Dehradun",
+        "distanceKmFromPrev": 0.0,
+        "destinationId": "chakrata",
+        "travelTimeFromPrevHours": 0.0,
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "destinationName": "Chakrata",
+        "selectionReason": null,
+        "pressureLevel": "LOW",
+        "pressureScore": 20.6,
+        "dayNumber": 3,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tiger Falls",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Deoban Forest",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43212",
+          "costPerNightINR": 2100.0,
+          "providerId": "prov_chopta_01",
+          "name": "Monal Himalayan Eco-Camps & Stays"
+        },
+        "district": "Rudraprayag",
+        "distanceKmFromPrev": 0.0,
+        "destinationId": "chopta",
+        "travelTimeFromPrevHours": 0.0,
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "destinationName": "Chopta",
+        "selectionReason": null,
+        "pressureLevel": "LOW",
+        "pressureScore": 23.3,
+        "dayNumber": 4,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Tungnath Summit Mountaineering Guides",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tungnath Temple",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Chandrashila Summit",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      }
+    ],
+    "travellersCount": 3,
+    "destinations": [],
+    "updatedAt": "2026-09-16T18:41:23.482504+00:00Z",
+    "costBreakdown": null,
+    "daysCount": 4,
+    "economicLocalSharePct": 85.0,
+    "travelDates": null,
+    "createdAt": "2026-09-16T18:41:23.482363+00:00Z",
+    "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "travelMode": "CAR"
+  },
+  {
+    "travellersCount": 3,
+    "daysCount": 4,
+    "id": "itin_b013c5cd",
+    "updatedAt": "2026-09-14T17:38:23.289806+00:00Z",
+    "startingRegion": "Dehradun",
+    "budgetPerPersonINR": 10000.0,
+    "createdAt": "2026-09-14T17:38:23.289671+00:00Z",
+    "interests": [
+      "Nature",
+      "Adventure"
+    ],
+    "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "pressureMitigationScore": 74.4,
+    "totalEstimatedCostINR": 19900.0,
+    "days": [
+      {
+        "stayRecommendation": {
+          "type": "Eco-Lodge / Local Homestay",
+          "bookingContact": "+91 98765 00000",
+          "costPerNightINR": 2100.0,
+          "providerId": null,
+          "name": "Traditional Mountain Stay (Munsiyari)"
+        },
+        "district": "Pithoragarh",
+        "destinationId": "munsiyari",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "destinationName": "Munsiyari",
+        "pressureLevel": "LOW",
+        "pressureScore": 16.1,
+        "dayNumber": 1,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Panchachuli Viewpoint",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Birthi Falls",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43210",
+          "costPerNightINR": 1800.0,
+          "providerId": "prov_kanatal_01",
+          "name": "Pahadi Soul Homestay & Organic Orchard"
+        },
+        "district": "Tehri Garhwal",
+        "destinationId": "kanatal",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "destinationName": "Kanatal",
+        "pressureLevel": "LOW",
+        "pressureScore": 18.4,
+        "dayNumber": 2,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Kodia Jungle Local Trek & Birding Guides",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Surkanda Devi Temple",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Kodia Jungle",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43215",
+          "costPerNightINR": 1900.0,
+          "providerId": "prov_chakrata_01",
+          "name": "Jaunsari Heritage Homestay"
+        },
+        "district": "Dehradun",
+        "destinationId": "chakrata",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "destinationName": "Chakrata",
+        "pressureLevel": "LOW",
+        "pressureScore": 20.6,
+        "dayNumber": 3,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tiger Falls",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Deoban Forest",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      },
+      {
+        "stayRecommendation": {
+          "type": "Verified Village Homestay",
+          "bookingContact": "+91 98765 43212",
+          "costPerNightINR": 2100.0,
+          "providerId": "prov_chopta_01",
+          "name": "Monal Himalayan Eco-Camps & Stays"
+        },
+        "district": "Rudraprayag",
+        "destinationId": "chopta",
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "destinationName": "Chopta",
+        "pressureLevel": "LOW",
+        "pressureScore": 23.3,
+        "dayNumber": 4,
+        "activities": [
+          {
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "time": "08:30 AM",
+            "providerName": "Tungnath Summit Mountaineering Guides",
+            "costEstimateINR": 350.0,
+            "title": "Morning Exploration at Tungnath Temple",
+            "category": "Nature & Trekking"
+          },
+          {
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "time": "01:30 PM",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0,
+            "title": "Organic Pahadi Cuisine Experience",
+            "category": "Local Food"
+          },
+          {
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "time": "04:30 PM",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0,
+            "title": "Golden Hour Visit to Chandrashila Summit",
+            "category": "Culture & Relaxation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "travellersCount": 3,
+    "daysCount": 4,
+    "id": "itin_b1712688",
+    "updatedAt": "2026-09-14T17:31:17.425402+00:00Z",
+    "startingRegion": "Dehradun",
+    "budgetPerPersonINR": 10000.0,
+    "createdAt": "2026-09-14T17:31:17.425298Z",
     "interests": [
       "Nature",
       "Adventure"
@@ -748,19 +2519,29 @@
     ]
   },
   {
-    "id": "itin_b1712688",
+    "id": "itin_0f881ba9",
     "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "tripSummary": null,
     "daysCount": 4,
     "travellersCount": 3,
     "budgetPerPersonINR": 10000.0,
     "totalEstimatedCostINR": 19900.0,
     "pressureMitigationScore": 74.4,
+    "economicLocalSharePct": 85.0,
+    "totalTravelTimeHours": 0.0,
     "interests": [
       "Nature",
       "Adventure"
     ],
+    "travelMode": "CAR",
     "startingRegion": "Dehradun",
+    "travelDates": null,
     "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "explanation": null,
+    "warnings": [],
+    "destinations": [],
+    "costBreakdown": null,
+    "rankedDestinations": [],
     "days": [
       {
         "dayNumber": 1,
@@ -802,7 +2583,10 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       },
       {
         "dayNumber": 2,
@@ -844,7 +2628,10 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       },
       {
         "dayNumber": 3,
@@ -886,7 +2673,10 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       },
       {
         "dayNumber": 4,
@@ -928,26 +2718,39 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       }
     ],
-    "createdAt": "2026-09-14T17:31:17.425298Z",
-    "updatedAt": "2026-09-14T17:31:17.425402+00:00Z"
+    "createdAt": "2026-09-20T10:54:06.541346+00:00Z",
+    "updatedAt": "2026-09-20T10:54:06.541569+00:00Z"
   },
   {
-    "id": "itin_638161d3",
+    "id": "itin_7b2c9a74",
     "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "tripSummary": null,
     "daysCount": 4,
     "travellersCount": 3,
     "budgetPerPersonINR": 10000.0,
     "totalEstimatedCostINR": 19900.0,
     "pressureMitigationScore": 74.4,
+    "economicLocalSharePct": 85.0,
+    "totalTravelTimeHours": 0.0,
     "interests": [
       "Nature",
       "Adventure"
     ],
+    "travelMode": "CAR",
     "startingRegion": "Dehradun",
+    "travelDates": null,
     "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "explanation": null,
+    "warnings": [],
+    "destinations": [],
+    "costBreakdown": null,
+    "rankedDestinations": [],
     "days": [
       {
         "dayNumber": 1,
@@ -989,7 +2792,10 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       },
       {
         "dayNumber": 2,
@@ -1031,7 +2837,10 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       },
       {
         "dayNumber": 3,
@@ -1073,7 +2882,10 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       },
       {
         "dayNumber": 4,
@@ -1115,26 +2927,39 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       }
     ],
-    "createdAt": "2026-09-14T17:31:29.030223Z",
-    "updatedAt": "2026-09-14T17:31:29.030353+00:00Z"
+    "createdAt": "2026-09-20T11:18:31.213304+00:00Z",
+    "updatedAt": "2026-09-20T11:18:31.213489+00:00Z"
   },
   {
-    "id": "itin_282cd010",
+    "id": "itin_171615a4",
     "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "tripSummary": null,
     "daysCount": 4,
     "travellersCount": 3,
     "budgetPerPersonINR": 10000.0,
     "totalEstimatedCostINR": 19900.0,
     "pressureMitigationScore": 74.4,
+    "economicLocalSharePct": 85.0,
+    "totalTravelTimeHours": 0.0,
     "interests": [
       "Nature",
       "Adventure"
     ],
+    "travelMode": "CAR",
     "startingRegion": "Dehradun",
+    "travelDates": null,
     "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "explanation": null,
+    "warnings": [],
+    "destinations": [],
+    "costBreakdown": null,
+    "rankedDestinations": [],
     "days": [
       {
         "dayNumber": 1,
@@ -1176,7 +3001,10 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       },
       {
         "dayNumber": 2,
@@ -1218,7 +3046,10 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       },
       {
         "dayNumber": 3,
@@ -1260,7 +3091,10 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       },
       {
         "dayNumber": 4,
@@ -1302,26 +3136,39 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       }
     ],
-    "createdAt": "2026-09-14T17:32:29.209545Z",
-    "updatedAt": "2026-09-14T17:32:29.209681+00:00Z"
+    "createdAt": "2026-09-20T11:41:36.445521+00:00Z",
+    "updatedAt": "2026-09-20T11:41:36.445680+00:00Z"
   },
   {
-    "id": "itin_38c7fe5c",
+    "id": "itin_9430c16a",
     "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "tripSummary": null,
     "daysCount": 4,
     "travellersCount": 3,
     "budgetPerPersonINR": 10000.0,
     "totalEstimatedCostINR": 19900.0,
     "pressureMitigationScore": 74.4,
+    "economicLocalSharePct": 85.0,
+    "totalTravelTimeHours": 0.0,
     "interests": [
       "Nature",
       "Adventure"
     ],
+    "travelMode": "CAR",
     "startingRegion": "Dehradun",
+    "travelDates": null,
     "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "explanation": null,
+    "warnings": [],
+    "destinations": [],
+    "costBreakdown": null,
+    "rankedDestinations": [],
     "days": [
       {
         "dayNumber": 1,
@@ -1363,7 +3210,10 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       },
       {
         "dayNumber": 2,
@@ -1405,7 +3255,10 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       },
       {
         "dayNumber": 3,
@@ -1447,7 +3300,10 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       },
       {
         "dayNumber": 4,
@@ -1489,26 +3345,39 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       }
     ],
-    "createdAt": "2026-09-14T17:37:15.432025Z",
-    "updatedAt": "2026-09-14T17:37:15.432379+00:00Z"
+    "createdAt": "2026-09-20T11:42:20.969791+00:00Z",
+    "updatedAt": "2026-09-20T11:42:20.969928+00:00Z"
   },
   {
-    "id": "itin_b013c5cd",
+    "id": "itin_38ec40c7",
     "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "tripSummary": null,
     "daysCount": 4,
     "travellersCount": 3,
     "budgetPerPersonINR": 10000.0,
     "totalEstimatedCostINR": 19900.0,
     "pressureMitigationScore": 74.4,
+    "economicLocalSharePct": 85.0,
+    "totalTravelTimeHours": 0.0,
     "interests": [
       "Nature",
       "Adventure"
     ],
+    "travelMode": "CAR",
     "startingRegion": "Dehradun",
+    "travelDates": null,
     "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "explanation": null,
+    "warnings": [],
+    "destinations": [],
+    "costBreakdown": null,
+    "rankedDestinations": [],
     "days": [
       {
         "dayNumber": 1,
@@ -1550,7 +3419,10 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       },
       {
         "dayNumber": 2,
@@ -1592,7 +3464,10 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       },
       {
         "dayNumber": 3,
@@ -1634,7 +3509,10 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       },
       {
         "dayNumber": 4,
@@ -1676,10 +3554,1058 @@
             "costEstimateINR": 250.0
           }
         ],
-        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor."
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
       }
     ],
-    "createdAt": "2026-09-14T17:38:23.289671+00:00Z",
-    "updatedAt": "2026-09-14T17:38:23.289806+00:00Z"
+    "createdAt": "2026-09-20T11:46:17.678608+00:00Z",
+    "updatedAt": "2026-09-20T11:46:17.678792+00:00Z"
+  },
+  {
+    "id": "itin_3b95d766",
+    "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "tripSummary": null,
+    "daysCount": 4,
+    "travellersCount": 3,
+    "budgetPerPersonINR": 10000.0,
+    "totalEstimatedCostINR": 19900.0,
+    "pressureMitigationScore": 74.4,
+    "economicLocalSharePct": 85.0,
+    "totalTravelTimeHours": 0.0,
+    "interests": [
+      "Nature",
+      "Adventure"
+    ],
+    "travelMode": "CAR",
+    "startingRegion": "Dehradun",
+    "travelDates": null,
+    "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "explanation": null,
+    "warnings": [],
+    "destinations": [],
+    "costBreakdown": null,
+    "rankedDestinations": [],
+    "days": [
+      {
+        "dayNumber": 1,
+        "destinationId": "munsiyari",
+        "destinationName": "Munsiyari",
+        "district": "Pithoragarh",
+        "pressureLevel": "LOW",
+        "pressureScore": 16.1,
+        "stayRecommendation": {
+          "providerId": null,
+          "name": "Traditional Mountain Stay (Munsiyari)",
+          "type": "Eco-Lodge / Local Homestay",
+          "costPerNightINR": 2100.0,
+          "bookingContact": "+91 98765 00000"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Panchachuli Viewpoint",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Birthi Falls",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 2,
+        "destinationId": "kanatal",
+        "destinationName": "Kanatal",
+        "district": "Tehri Garhwal",
+        "pressureLevel": "LOW",
+        "pressureScore": 18.4,
+        "stayRecommendation": {
+          "providerId": "prov_kanatal_01",
+          "name": "Pahadi Soul Homestay & Organic Orchard",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 1800.0,
+          "bookingContact": "+91 98765 43210"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Surkanda Devi Temple",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Kodia Jungle Local Trek & Birding Guides",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Kodia Jungle",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 3,
+        "destinationId": "chakrata",
+        "destinationName": "Chakrata",
+        "district": "Dehradun",
+        "pressureLevel": "LOW",
+        "pressureScore": 20.6,
+        "stayRecommendation": {
+          "providerId": "prov_chakrata_01",
+          "name": "Jaunsari Heritage Homestay",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 1900.0,
+          "bookingContact": "+91 98765 43215"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Tiger Falls",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Deoban Forest",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 4,
+        "destinationId": "chopta",
+        "destinationName": "Chopta",
+        "district": "Rudraprayag",
+        "pressureLevel": "LOW",
+        "pressureScore": 23.3,
+        "stayRecommendation": {
+          "providerId": "prov_chopta_01",
+          "name": "Monal Himalayan Eco-Camps & Stays",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 2100.0,
+          "bookingContact": "+91 98765 43212"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Tungnath Temple",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Tungnath Summit Mountaineering Guides",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Chandrashila Summit",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      }
+    ],
+    "createdAt": "2026-09-20T11:52:25.575856+00:00Z",
+    "updatedAt": "2026-09-20T11:52:25.576053+00:00Z"
+  },
+  {
+    "id": "itin_6387e814",
+    "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "tripSummary": null,
+    "daysCount": 4,
+    "travellersCount": 3,
+    "budgetPerPersonINR": 10000.0,
+    "totalEstimatedCostINR": 19900.0,
+    "pressureMitigationScore": 74.4,
+    "economicLocalSharePct": 85.0,
+    "totalTravelTimeHours": 0.0,
+    "interests": [
+      "Nature",
+      "Adventure"
+    ],
+    "travelMode": "CAR",
+    "startingRegion": "Dehradun",
+    "travelDates": null,
+    "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "explanation": null,
+    "warnings": [],
+    "destinations": [],
+    "costBreakdown": null,
+    "rankedDestinations": [],
+    "days": [
+      {
+        "dayNumber": 1,
+        "destinationId": "munsiyari",
+        "destinationName": "Munsiyari",
+        "district": "Pithoragarh",
+        "pressureLevel": "LOW",
+        "pressureScore": 16.1,
+        "stayRecommendation": {
+          "providerId": null,
+          "name": "Traditional Mountain Stay (Munsiyari)",
+          "type": "Eco-Lodge / Local Homestay",
+          "costPerNightINR": 2100.0,
+          "bookingContact": "+91 98765 00000"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Panchachuli Viewpoint",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Birthi Falls",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 2,
+        "destinationId": "kanatal",
+        "destinationName": "Kanatal",
+        "district": "Tehri Garhwal",
+        "pressureLevel": "LOW",
+        "pressureScore": 18.4,
+        "stayRecommendation": {
+          "providerId": "prov_kanatal_01",
+          "name": "Pahadi Soul Homestay & Organic Orchard",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 1800.0,
+          "bookingContact": "+91 98765 43210"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Surkanda Devi Temple",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Kodia Jungle Local Trek & Birding Guides",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Kodia Jungle",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 3,
+        "destinationId": "chakrata",
+        "destinationName": "Chakrata",
+        "district": "Dehradun",
+        "pressureLevel": "LOW",
+        "pressureScore": 20.6,
+        "stayRecommendation": {
+          "providerId": "prov_chakrata_01",
+          "name": "Jaunsari Heritage Homestay",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 1900.0,
+          "bookingContact": "+91 98765 43215"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Tiger Falls",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Deoban Forest",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 4,
+        "destinationId": "chopta",
+        "destinationName": "Chopta",
+        "district": "Rudraprayag",
+        "pressureLevel": "LOW",
+        "pressureScore": 23.3,
+        "stayRecommendation": {
+          "providerId": "prov_chopta_01",
+          "name": "Monal Himalayan Eco-Camps & Stays",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 2100.0,
+          "bookingContact": "+91 98765 43212"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Tungnath Temple",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Tungnath Summit Mountaineering Guides",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Chandrashila Summit",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      }
+    ],
+    "createdAt": "2026-09-20T12:13:21.595735+00:00Z",
+    "updatedAt": "2026-09-20T12:13:21.595866+00:00Z"
+  },
+  {
+    "id": "itin_9e4b54c3",
+    "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "tripSummary": null,
+    "daysCount": 4,
+    "travellersCount": 3,
+    "budgetPerPersonINR": 10000.0,
+    "totalEstimatedCostINR": 19900.0,
+    "pressureMitigationScore": 74.4,
+    "economicLocalSharePct": 85.0,
+    "totalTravelTimeHours": 0.0,
+    "interests": [
+      "Nature",
+      "Adventure"
+    ],
+    "travelMode": "CAR",
+    "startingRegion": "Dehradun",
+    "travelDates": null,
+    "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "explanation": null,
+    "warnings": [],
+    "destinations": [],
+    "costBreakdown": null,
+    "rankedDestinations": [],
+    "days": [
+      {
+        "dayNumber": 1,
+        "destinationId": "munsiyari",
+        "destinationName": "Munsiyari",
+        "district": "Pithoragarh",
+        "pressureLevel": "LOW",
+        "pressureScore": 16.1,
+        "stayRecommendation": {
+          "providerId": null,
+          "name": "Traditional Mountain Stay (Munsiyari)",
+          "type": "Eco-Lodge / Local Homestay",
+          "costPerNightINR": 2100.0,
+          "bookingContact": "+91 98765 00000"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Panchachuli Viewpoint",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Birthi Falls",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 2,
+        "destinationId": "kanatal",
+        "destinationName": "Kanatal",
+        "district": "Tehri Garhwal",
+        "pressureLevel": "LOW",
+        "pressureScore": 18.4,
+        "stayRecommendation": {
+          "providerId": "prov_kanatal_01",
+          "name": "Pahadi Soul Homestay & Organic Orchard",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 1800.0,
+          "bookingContact": "+91 98765 43210"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Surkanda Devi Temple",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Kodia Jungle Local Trek & Birding Guides",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Kodia Jungle",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 3,
+        "destinationId": "chakrata",
+        "destinationName": "Chakrata",
+        "district": "Dehradun",
+        "pressureLevel": "LOW",
+        "pressureScore": 20.6,
+        "stayRecommendation": {
+          "providerId": "prov_chakrata_01",
+          "name": "Jaunsari Heritage Homestay",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 1900.0,
+          "bookingContact": "+91 98765 43215"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Tiger Falls",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Deoban Forest",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 4,
+        "destinationId": "chopta",
+        "destinationName": "Chopta",
+        "district": "Rudraprayag",
+        "pressureLevel": "LOW",
+        "pressureScore": 23.3,
+        "stayRecommendation": {
+          "providerId": "prov_chopta_01",
+          "name": "Monal Himalayan Eco-Camps & Stays",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 2100.0,
+          "bookingContact": "+91 98765 43212"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Tungnath Temple",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Tungnath Summit Mountaineering Guides",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Chandrashila Summit",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      }
+    ],
+    "createdAt": "2026-09-20T12:17:04.977437+00:00Z",
+    "updatedAt": "2026-09-20T12:17:04.977633+00:00Z"
+  },
+  {
+    "id": "itin_47b88e54",
+    "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "tripSummary": null,
+    "daysCount": 4,
+    "travellersCount": 3,
+    "budgetPerPersonINR": 10000.0,
+    "totalEstimatedCostINR": 19900.0,
+    "pressureMitigationScore": 74.4,
+    "economicLocalSharePct": 85.0,
+    "totalTravelTimeHours": 0.0,
+    "interests": [
+      "Nature",
+      "Adventure"
+    ],
+    "travelMode": "CAR",
+    "startingRegion": "Dehradun",
+    "travelDates": null,
+    "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "explanation": null,
+    "warnings": [],
+    "destinations": [],
+    "costBreakdown": null,
+    "rankedDestinations": [],
+    "days": [
+      {
+        "dayNumber": 1,
+        "destinationId": "munsiyari",
+        "destinationName": "Munsiyari",
+        "district": "Pithoragarh",
+        "pressureLevel": "LOW",
+        "pressureScore": 16.1,
+        "stayRecommendation": {
+          "providerId": null,
+          "name": "Traditional Mountain Stay (Munsiyari)",
+          "type": "Eco-Lodge / Local Homestay",
+          "costPerNightINR": 2100.0,
+          "bookingContact": "+91 98765 00000"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Panchachuli Viewpoint",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Birthi Falls",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 2,
+        "destinationId": "kanatal",
+        "destinationName": "Kanatal",
+        "district": "Tehri Garhwal",
+        "pressureLevel": "LOW",
+        "pressureScore": 18.4,
+        "stayRecommendation": {
+          "providerId": "prov_kanatal_01",
+          "name": "Pahadi Soul Homestay & Organic Orchard",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 1800.0,
+          "bookingContact": "+91 98765 43210"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Surkanda Devi Temple",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Kodia Jungle Local Trek & Birding Guides",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Kodia Jungle",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 3,
+        "destinationId": "chakrata",
+        "destinationName": "Chakrata",
+        "district": "Dehradun",
+        "pressureLevel": "LOW",
+        "pressureScore": 20.6,
+        "stayRecommendation": {
+          "providerId": "prov_chakrata_01",
+          "name": "Jaunsari Heritage Homestay",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 1900.0,
+          "bookingContact": "+91 98765 43215"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Tiger Falls",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Deoban Forest",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 4,
+        "destinationId": "chopta",
+        "destinationName": "Chopta",
+        "district": "Rudraprayag",
+        "pressureLevel": "LOW",
+        "pressureScore": 23.3,
+        "stayRecommendation": {
+          "providerId": "prov_chopta_01",
+          "name": "Monal Himalayan Eco-Camps & Stays",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 2100.0,
+          "bookingContact": "+91 98765 43212"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Tungnath Temple",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Tungnath Summit Mountaineering Guides",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Chandrashila Summit",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      }
+    ],
+    "createdAt": "2026-09-20T12:17:45.070231+00:00Z",
+    "updatedAt": "2026-09-20T12:17:45.070437+00:00Z"
+  },
+  {
+    "id": "itin_ea0f5c64",
+    "title": "PahadiPulse Sustainable 4-Day Eco Circuit",
+    "tripSummary": null,
+    "daysCount": 4,
+    "travellersCount": 3,
+    "budgetPerPersonINR": 10000.0,
+    "totalEstimatedCostINR": 19900.0,
+    "pressureMitigationScore": 74.4,
+    "economicLocalSharePct": 85.0,
+    "totalTravelTimeHours": 0.0,
+    "interests": [
+      "Nature",
+      "Adventure"
+    ],
+    "travelMode": "CAR",
+    "startingRegion": "Dehradun",
+    "travelDates": null,
+    "rationale": "Optimized circuit balances your preferences (Nature, Adventure) and budget while avoiding congested high-pressure choke points. By directing your travel to Munsiyari, Kanatal, Chakrata, Chopta, this itinerary reduces estimated regional infrastructure strain by 74.4% and routes 100% of accommodation to local village homestays.",
+    "explanation": null,
+    "warnings": [],
+    "destinations": [],
+    "costBreakdown": null,
+    "rankedDestinations": [],
+    "days": [
+      {
+        "dayNumber": 1,
+        "destinationId": "munsiyari",
+        "destinationName": "Munsiyari",
+        "district": "Pithoragarh",
+        "pressureLevel": "LOW",
+        "pressureScore": 16.1,
+        "stayRecommendation": {
+          "providerId": null,
+          "name": "Traditional Mountain Stay (Munsiyari)",
+          "type": "Eco-Lodge / Local Homestay",
+          "costPerNightINR": 2100.0,
+          "bookingContact": "+91 98765 00000"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Panchachuli Viewpoint",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Birthi Falls",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Munsiyari corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 2,
+        "destinationId": "kanatal",
+        "destinationName": "Kanatal",
+        "district": "Tehri Garhwal",
+        "pressureLevel": "LOW",
+        "pressureScore": 18.4,
+        "stayRecommendation": {
+          "providerId": "prov_kanatal_01",
+          "name": "Pahadi Soul Homestay & Organic Orchard",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 1800.0,
+          "bookingContact": "+91 98765 43210"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Surkanda Devi Temple",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Kodia Jungle Local Trek & Birding Guides",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Kodia Jungle",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Kanatal corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 3,
+        "destinationId": "chakrata",
+        "destinationName": "Chakrata",
+        "district": "Dehradun",
+        "pressureLevel": "LOW",
+        "pressureScore": 20.6,
+        "stayRecommendation": {
+          "providerId": "prov_chakrata_01",
+          "name": "Jaunsari Heritage Homestay",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 1900.0,
+          "bookingContact": "+91 98765 43215"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Tiger Falls",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Local Community Trek Guide",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Deoban Forest",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chakrata corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      },
+      {
+        "dayNumber": 4,
+        "destinationId": "chopta",
+        "destinationName": "Chopta",
+        "district": "Rudraprayag",
+        "pressureLevel": "LOW",
+        "pressureScore": 23.3,
+        "stayRecommendation": {
+          "providerId": "prov_chopta_01",
+          "name": "Monal Himalayan Eco-Camps & Stays",
+          "type": "Verified Village Homestay",
+          "costPerNightINR": 2100.0,
+          "bookingContact": "+91 98765 43212"
+        },
+        "activities": [
+          {
+            "time": "08:30 AM",
+            "title": "Morning Exploration at Tungnath Temple",
+            "description": "Guided gentle trail through native forests. High wildlife and mountain panorama visibility with zero crowd bottlenecks.",
+            "category": "Nature & Trekking",
+            "providerName": "Tungnath Summit Mountaineering Guides",
+            "costEstimateINR": 350.0
+          },
+          {
+            "time": "01:30 PM",
+            "title": "Organic Pahadi Cuisine Experience",
+            "description": "Traditional Garhwali/Kumaoni lunch with Mandua roti, Bhatt ki Churkani, and local wild mint chutney.",
+            "category": "Local Food",
+            "providerName": "Village Community Kitchen",
+            "costEstimateINR": 400.0
+          },
+          {
+            "time": "04:30 PM",
+            "title": "Golden Hour Visit to Chandrashila Summit",
+            "description": "Uninterrupted views of snow-capped peaks with authentic handicrafts and herbal tea from local cooperatives.",
+            "category": "Culture & Relaxation",
+            "providerName": "Pahadi Artisans Guild",
+            "costEstimateINR": 250.0
+          }
+        ],
+        "travelNote": "Scenic mountain road transit. Low traffic congestion expected on the Chopta corridor.",
+        "selectionReason": null,
+        "travelTimeFromPrevHours": 0.0,
+        "distanceKmFromPrev": 0.0
+      }
+    ],
+    "createdAt": "2026-09-20T12:27:31.045996+00:00Z",
+    "updatedAt": "2026-09-20T12:27:31.046070+00:00Z"
   }
 ]

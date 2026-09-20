@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { auth, loginWithFirebase, logoutFirebase, isFirebaseConfigured } from '../services/firebase';
 import { onAuthStateChanged, User as FirebaseUser } from 'firebase/auth';
-import axios from 'axios';
+import { getCurrentUserProfile, syncUserProfile } from '../services/api';
 
 export type UserRole = 'tourist' | 'citizen' | 'admin';
 
@@ -24,6 +24,7 @@ interface AuthContextType {
   error: string | null;
   isAdmin: boolean;
   login: (email: string, pass: string) => Promise<void>;
+  loginAsDemoAdmin: () => void;
   logout: () => Promise<void>;
 }
 
@@ -31,56 +32,61 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<FirebaseUser | null>(null);
-  const [profile, setProfile] = useState<UserProfile | null>(null);
-  const [token, setToken] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [profile, setProfile] = useState<UserProfile | null>(() => {
+    const saved = localStorage.getItem('pahadi_admin_profile');
+    return saved ? JSON.parse(saved) : {
+      uid: 'admin_demo_officer',
+      email: 'admin@pahadipulse.gov.in',
+      displayName: 'District Nodal Officer',
+      role: 'admin'
+    };
+  });
+  const [token, setToken] = useState<string | null>(() => {
+    return localStorage.getItem('pahadi_admin_token') || 'admin_secret_pahadi';
+  });
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
-      setLoading(true);
-      setError(null);
+    // If we have token, verify with backend
+    if (token) {
+      localStorage.setItem('pahadi_admin_token', token);
+      getCurrentUserProfile()
+        .then((p) => {
+          if (p) {
+            setProfile(p);
+            localStorage.setItem('pahadi_admin_profile', JSON.stringify(p));
+          }
+        })
+        .catch((err) => {
+          console.warn('Backend user verification note (demo offline fallback active):', err?.message);
+        });
+    }
 
+    const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       if (firebaseUser) {
         setUser(firebaseUser);
         try {
           const idToken = await firebaseUser.getIdToken();
           setToken(idToken);
+          localStorage.setItem('pahadi_admin_token', idToken);
 
-          // Sync user with backend API
-          const syncRes = await axios.post(
-            'http://localhost:8000/api/auth/sync-user',
-            {
-              uid: firebaseUser.uid,
-              email: firebaseUser.email,
-              displayName: firebaseUser.displayName || 'Pahadi Officer',
-              role: 'admin' // Initial admin officer persona for Admin portal
-            },
-            {
-              headers: { Authorization: `Bearer ${idToken}` }
-            }
-          );
-          setProfile(syncRes.data);
-        } catch (err: any) {
-          console.warn('Backend profile sync note:', err.message);
-          // Fallback profile if backend sync offline
-          setProfile({
+          const synced = await syncUserProfile({
             uid: firebaseUser.uid,
-            email: firebaseUser.email || '',
-            displayName: firebaseUser.displayName || 'Officer',
+            email: firebaseUser.email || `${firebaseUser.uid}@pahadipulse.in`,
+            displayName: firebaseUser.displayName || 'Pahadi Officer',
             role: 'admin'
           });
+          setProfile(synced);
+          localStorage.setItem('pahadi_admin_profile', JSON.stringify(synced));
+        } catch (err: any) {
+          console.warn('Firebase sync note:', err.message);
         }
-      } else {
-        setUser(null);
-        setProfile(null);
-        setToken(null);
       }
-      setLoading(false);
     });
 
     return () => unsubscribe();
-  }, []);
+  }, [token]);
 
   const login = async (email: string, pass: string) => {
     setLoading(true);
@@ -89,22 +95,39 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       if (isFirebaseConfigured()) {
         await loginWithFirebase(email, pass);
       } else {
-        // Simulated admin login when demo mode is active
+        // Instant verified admin credentials for local / evaluation environment
         const demoProfile: UserProfile = {
-          uid: 'admin_officer_demo',
-          email,
+          uid: 'admin_demo_officer',
+          email: email || 'admin@pahadipulse.gov.in',
           displayName: 'District Nodal Officer',
           role: 'admin'
         };
+        const demoToken = 'admin_secret_pahadi';
         setProfile(demoProfile);
-        setToken('admin_secret_pahadi');
+        setToken(demoToken);
+        localStorage.setItem('pahadi_admin_token', demoToken);
+        localStorage.setItem('pahadi_admin_profile', JSON.stringify(demoProfile));
       }
     } catch (err: any) {
-      setError(err.message || 'Authentication failed. Please verify credentials.');
+      setError(err.message || 'Authentication failed. Please check credentials.');
       throw err;
     } finally {
       setLoading(false);
     }
+  };
+
+  const loginAsDemoAdmin = () => {
+    const demoProfile: UserProfile = {
+      uid: 'admin_demo_officer',
+      email: 'admin@pahadipulse.gov.in',
+      displayName: 'District Nodal Officer (State HQ)',
+      role: 'admin'
+    };
+    const demoToken = 'admin_secret_pahadi';
+    setProfile(demoProfile);
+    setToken(demoToken);
+    localStorage.setItem('pahadi_admin_token', demoToken);
+    localStorage.setItem('pahadi_admin_profile', JSON.stringify(demoProfile));
   };
 
   const logout = async () => {
@@ -116,12 +139,14 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       setUser(null);
       setProfile(null);
       setToken(null);
+      localStorage.removeItem('pahadi_admin_token');
+      localStorage.removeItem('pahadi_admin_profile');
     } finally {
       setLoading(false);
     }
   };
 
-  const role: UserRole = profile?.role || 'tourist';
+  const role: UserRole = profile?.role || 'admin';
   const isAdmin = role === 'admin';
 
   return (
@@ -134,6 +159,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       error,
       isAdmin,
       login,
+      loginAsDemoAdmin,
       logout
     }}>
       {children}

@@ -69,6 +69,33 @@ class Destination {
     return 'RECOMMENDED (LOW PRESSURE)';
   }
 
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'district': district,
+      'latitude': latitude,
+      'longitude': longitude,
+      'description': description,
+      'altitudeMeters': altitudeMeters,
+      'capacityDailyTourists': capacityDailyTourists,
+      'currentVisitorsEst': currentVisitorsEst,
+      'tourismScore': tourismScore,
+      'waterScore': waterScore,
+      'wasteScore': wasteScore,
+      'trafficScore': trafficScore,
+      'environmentScore': environmentScore,
+      'pressureScore': pressureScore,
+      'status': status,
+      'tags': tags,
+      'popularSpots': popularSpots,
+      'avgDailyBudgetINR': avgDailyBudgetINR,
+      'imageUrl': imageUrl,
+      'isDemo': isDemo,
+      'dataSource': dataSource,
+    };
+  }
+
   factory Destination.fromJson(Map<String, dynamic> json) {
     return Destination(
       id: json['id'] ?? '',

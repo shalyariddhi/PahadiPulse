@@ -1,39 +1,49 @@
-:root {
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-heading: 'Outfit', sans-serif;
-  
-  /* Mountain Palette */
-  --bg-dark: #0f1914;
-  --bg-card: rgba(22, 38, 30, 0.85);
-  --bg-card-hover: rgba(30, 52, 41, 0.95);
-  --border-subtle: rgba(74, 122, 98, 0.25);
-  --border-active: rgba(82, 196, 137, 0.5);
-  
-  --forest-900: #0a140f;
-  --forest-800: #12231b;
-  --forest-700: #1b3529;
-  --forest-600: #264a39;
-  --forest-500: #34634d;
-  
-  --emerald-accent: #10b981;
-  --emerald-glow: rgba(16, 185, 129, 0.35);
-  --pine-teal: #14b8a6;
-  --snow-white: #f8fafc;
-  --slate-dim: #94a3b8;
-  --slate-subtle: #64748b;
-  
-  /* Status Color Tokens */
-  --status-low: #10b981;
-  --status-low-bg: rgba(16, 185, 129, 0.15);
-  --status-mod: #f59e0b;
-  --status-mod-bg: rgba(245, 158, 11, 0.15);
-  --status-high: #f97316;
-  --status-high-bg: rgba(249, 115, 22, 0.15);
-  --status-critical: #ef4444;
-  --status-critical-bg: rgba(239, 68, 68, 0.2);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
 
-  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  --glass-blur: blur(12px);
+:root {
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  
+  /* Precision Civic Dark Theme */
+  --bg-dark: #09110d;
+  --bg-surface: #0f1c15;
+  --bg-card: #14241c;
+  --bg-card-hover: #192f25;
+  --bg-card-elevated: #1e372b;
+  
+  --border-subtle: #244132;
+  --border-active: #3b6e55;
+  --border-focus: #10b981;
+  
+  --emerald-primary: #10b981;
+  --emerald-hover: #059669;
+  --emerald-subtle: rgba(16, 185, 129, 0.12);
+  --pine-teal: #14b8a6;
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  /* Status Color Tokens with high-contrast accessibility */
+  --status-low: #10b981;
+  --status-low-bg: rgba(16, 185, 129, 0.14);
+  --status-low-border: rgba(16, 185, 129, 0.35);
+
+  --status-mod: #f59e0b;
+  --status-mod-bg: rgba(245, 158, 11, 0.14);
+  --status-mod-border: rgba(245, 158, 11, 0.35);
+
+  --status-high: #f97316;
+  --status-high-bg: rgba(249, 115, 22, 0.14);
+  --status-high-border: rgba(249, 115, 22, 0.35);
+
+  --status-critical: #ef4444;
+  --status-critical-bg: rgba(239, 68, 68, 0.18);
+  --status-critical-border: rgba(239, 68, 68, 0.45);
+
+  --shadow-subtle: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.3);
+  --shadow-card: 0 4px 16px -2px rgba(0, 0, 0, 0.4), 0 2px 6px -2px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 12px 30px -4px rgba(0, 0, 0, 0.6);
 }
 
 * {
@@ -45,162 +55,184 @@
 body {
   font-family: var(--font-primary);
   background-color: var(--bg-dark);
-  color: var(--snow-white);
+  color: var(--text-primary);
   min-height: 100vh;
   overflow-x: hidden;
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(20, 184, 166, 0.08) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%),
-    radial-gradient(at 50% 50%, rgba(10, 20, 15, 0.9) 0px, #0a140f 100%);
-  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
 }
 
-/* Glassmorphic Components */
+/* Panel & Card System */
 .glass-panel {
   background: var(--bg-card);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--border-subtle);
-  border-radius: 16px;
-  box-shadow: var(--shadow-glass);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
 }
 
 .glass-panel-hover {
-  transition: all 0.25s ease;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-panel-hover:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-active);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-elevated);
 }
 
-/* Mountain Custom Scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--forest-900);
+  background: var(--bg-surface);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--forest-600);
+  background: var(--border-subtle);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--emerald-accent);
+  background: var(--border-active);
 }
 
-/* Badge Styles */
+/* Badges */
 .badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
 }
 
 .badge-low {
   background: var(--status-low-bg);
   color: var(--status-low);
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  border: 1px solid var(--status-low-border);
 }
 
 .badge-moderate {
   background: var(--status-mod-bg);
   color: var(--status-mod);
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  border: 1px solid var(--status-mod-border);
 }
 
 .badge-high {
   background: var(--status-high-bg);
   color: var(--status-high);
-  border: 1px solid rgba(249, 115, 22, 0.3);
+  border: 1px solid var(--status-high-border);
 }
 
 .badge-critical {
   background: var(--status-critical-bg);
   color: var(--status-critical);
-  border: 1px solid rgba(239, 68, 68, 0.4);
-  animation: pulse-border 2s infinite;
-}
-
-@keyframes pulse-border {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0);
-  }
+  border: 1px solid var(--status-critical-border);
 }
 
 /* Buttons */
 .btn-primary {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  color: white;
-  padding: 10px 18px;
-  border-radius: 10px;
+  background: var(--emerald-primary);
+  color: #ffffff;
+  padding: 9px 16px;
+  border-radius: 8px;
   font-weight: 600;
-  font-family: var(--font-heading);
-  border: none;
+  font-size: 0.875rem;
+  font-family: var(--font-primary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+  gap: 7px;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.25);
 }
 
 .btn-primary:hover {
+  background: var(--emerald-hover);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--snow-white);
-  padding: 10px 18px;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  padding: 9px 16px;
+  border-radius: 8px;
   font-weight: 500;
+  font-size: 0.875rem;
   border: 1px solid var(--border-subtle);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  transition: all 0.2s ease;
+  gap: 7px;
+  transition: all 0.15s ease;
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.1);
   border-color: var(--border-active);
 }
 
-/* Custom Leaflet Map styling for mountain dark theme */
+/* Leaflet Container Styling */
 .leaflet-container {
   width: 100%;
   height: 100%;
-  border-radius: 12px;
-  background-color: #0e1c15 !important;
+  border-radius: 10px;
+  background-color: #0b130e !important;
 }
 
 .leaflet-popup-content-wrapper {
-  background: #14281f !important;
-  color: #fff !important;
-  border: 1px solid #2d5a43 !important;
-  border-radius: 12px !important;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.5) !important;
+  background: #112018 !important;
+  color: #f8fafc !important;
+  border: 1px solid #244132 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6) !important;
 }
 
 .leaflet-popup-tip {
-  background: #14281f !important;
+  background: #112018 !important;
+}
+
+/* Empty States */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.empty-state-icon {
+  margin-bottom: 12px;
+  opacity: 0.6;
+}
+
+/* Skeleton Loading Animation */
+.skeleton {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.09) 50%, rgba(255, 255, 255, 0.04) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: 6px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }

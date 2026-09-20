@@ -83,7 +83,7 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
                     shape: BoxShape.circle,
                   ),
                   child: Icon(
-                    isSaved ? LucideIcons.bookmarkCheck : LucideIcons.bookmark,
+                    isSaved ? LucideIcons.bookmark : LucideIcons.bookmark,
                     color: isSaved ? AppColors.forestAccent : Colors.white,
                     size: 18,
                   ),

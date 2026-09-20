@@ -1,24 +1,41 @@
 import React, { useState } from 'react';
-import { Report, ReportStatus } from '../types';
-import { TriageModal } from '../components/reports/TriageModal';
-import { AlertTriangle, CheckCircle, Clock, ShieldAlert, Sparkles, Filter } from 'lucide-react';
+import { Report, ReportStatus, ReportCategory, ReportSeverity } from '../types';
+import { ReportDetailModal } from '../components/reports/ReportDetailModal';
+import { AlertTriangle, CheckCircle, Clock, ShieldAlert, Sparkles, Filter, Search, MapPin, Eye } from 'lucide-react';
 
 interface ReportsPageProps {
   reports: Report[];
   onReportUpdated: (updated: Report) => void;
+  selectedReport?: Report | null;
+  onClearSelectedReport?: () => void;
 }
 
-export const ReportsPage: React.FC<ReportsPageProps> = ({ reports, onReportUpdated }) => {
-  const [selectedReport, setSelectedReport] = useState<Report | null>(null);
+export const ReportsPage: React.FC<ReportsPageProps> = ({
+  reports,
+  onReportUpdated,
+  selectedReport: propSelectedReport,
+  onClearSelectedReport
+}) => {
+  const [internalSelectedReport, setInternalSelectedReport] = useState<Report | null>(null);
   const [statusFilter, setStatusFilter] = useState('ALL');
   const [categoryFilter, setCategoryFilter] = useState('ALL');
+  const [severityFilter, setSeverityFilter] = useState('ALL');
+  const [locationFilter, setLocationFilter] = useState('ALL');
+  const [search, setSearch] = useState('');
 
-  const categories = ['ALL', 'WATER', 'WASTE', 'ROAD', 'TRAFFIC', 'HEALTH', 'CONNECTIVITY', 'TOURISM', 'ENVIRONMENT'];
+  const activeModalReport = propSelectedReport || internalSelectedReport;
+
+  const categories = ['ALL', 'WATER', 'WASTE', 'ROAD', 'TRAFFIC', 'HEALTH', 'CONNECTIVITY', 'TOURISM', 'ENVIRONMENT', 'OTHER'];
+  const severities = ['ALL', 'CRITICAL', 'HIGH', 'MEDIUM', 'LOW'];
+  const locations = ['ALL', ...Array.from(new Set(reports.map((r) => r.destinationName).filter(Boolean)))];
 
   const filtered = reports.filter((r) => {
     const matchStatus = statusFilter === 'ALL' || r.status === statusFilter;
     const matchCat = categoryFilter === 'ALL' || r.aiCategory === categoryFilter || r.category === categoryFilter;
-    return matchStatus && matchCat;
+    const matchSev = severityFilter === 'ALL' || (r.severity === severityFilter || (severityFilter === 'CRITICAL' && r.aiSeverity >= 5) || (severityFilter === 'HIGH' && r.aiSeverity === 4) || (severityFilter === 'MEDIUM' && r.aiSeverity === 3) || (severityFilter === 'LOW' && r.aiSeverity <= 2));
+    const matchLoc = locationFilter === 'ALL' || r.destinationName === locationFilter;
+    const matchSearch = r.description.toLowerCase().includes(search.toLowerCase()) || (r.destinationName && r.destinationName.toLowerCase().includes(search.toLowerCase())) || r.userName.toLowerCase().includes(search.toLowerCase());
+    return matchStatus && matchCat && matchSev && matchLoc && matchSearch;
   });
 
   const getStatusBadge = (status: ReportStatus) => {
@@ -36,29 +53,48 @@ export const ReportsPage: React.FC<ReportsPageProps> = ({ reports, onReportUpdat
     }
   };
 
+  const handleCloseModal = () => {
+    setInternalSelectedReport(null);
+    if (onClearSelectedReport) onClearSelectedReport();
+  };
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
       {/* Header & Filter Bar */}
       <div className="glass-panel" style={{ padding: '18px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
         <div>
-          <h2 style={{ fontSize: '1.25rem', color: '#fff', margin: 0 }}>
-            Citizen Infrastructure Reports & AI Triage
-          </h2>
-          <p style={{ fontSize: '0.8rem', color: '#94a3b8' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '4px' }}>
+            <AlertTriangle size={22} color="#ef4444" />
+            <h2 style={{ fontSize: '1.25rem', color: '#fff', margin: 0 }}>
+              Citizen Infrastructure Reports & AI Triage
+            </h2>
+          </div>
+          <p style={{ fontSize: '0.8rem', color: '#94a3b8', margin: 0 }}>
             Multi-stage workflow: Submitted ➔ AI Classified ➔ Verified ➔ Assigned ➔ Resolved
           </p>
         </div>
 
-        <div style={{ display: 'flex', gap: '12px' }}>
+        <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', alignItems: 'center' }}>
+          <input
+            type="text"
+            placeholder="Search report..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            style={{
+              background: 'rgba(0,0,0,0.3)', border: '1px solid var(--border-subtle)',
+              borderRadius: '8px', padding: '8px 12px', color: '#fff', fontSize: '0.85rem'
+            }}
+          />
+
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
             style={{
               background: 'rgba(0,0,0,0.3)', border: '1px solid var(--border-subtle)',
-              borderRadius: '8px', padding: '8px 14px', color: '#fff', fontSize: '0.85rem'
+              borderRadius: '8px', padding: '8px 12px', color: '#fff', fontSize: '0.85rem'
             }}
           >
-            <option value="ALL" style={{ background: '#12231b' }}>All Workflow Statuses</option>
+            <option value="ALL" style={{ background: '#12231b' }}>All Statuses</option>
             <option value="SUBMITTED" style={{ background: '#12231b' }}>Submitted</option>
             <option value="AI_CLASSIFIED" style={{ background: '#12231b' }}>AI Classified</option>
             <option value="VERIFIED" style={{ background: '#12231b' }}>Verified</option>
@@ -71,7 +107,7 @@ export const ReportsPage: React.FC<ReportsPageProps> = ({ reports, onReportUpdat
             onChange={(e) => setCategoryFilter(e.target.value)}
             style={{
               background: 'rgba(0,0,0,0.3)', border: '1px solid var(--border-subtle)',
-              borderRadius: '8px', padding: '8px 14px', color: '#fff', fontSize: '0.85rem'
+              borderRadius: '8px', padding: '8px 12px', color: '#fff', fontSize: '0.85rem'
             }}
           >
             {categories.map((cat) => (
@@ -80,62 +116,103 @@ export const ReportsPage: React.FC<ReportsPageProps> = ({ reports, onReportUpdat
               </option>
             ))}
           </select>
+
+          <select
+            value={severityFilter}
+            onChange={(e) => setSeverityFilter(e.target.value)}
+            style={{
+              background: 'rgba(0,0,0,0.3)', border: '1px solid var(--border-subtle)',
+              borderRadius: '8px', padding: '8px 12px', color: '#fff', fontSize: '0.85rem'
+            }}
+          >
+            {severities.map((sev) => (
+              <option key={sev} value={sev} style={{ background: '#12231b' }}>
+                {sev === 'ALL' ? 'All Severities' : sev}
+              </option>
+            ))}
+          </select>
+
+          <select
+            value={locationFilter}
+            onChange={(e) => setLocationFilter(e.target.value)}
+            style={{
+              background: 'rgba(0,0,0,0.3)', border: '1px solid var(--border-subtle)',
+              borderRadius: '8px', padding: '8px 12px', color: '#fff', fontSize: '0.85rem'
+            }}
+          >
+            {locations.map((loc) => (
+              <option key={loc} value={loc} style={{ background: '#12231b' }}>
+                {loc === 'ALL' ? 'All Locations' : loc}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
 
-      {/* Reports Table / Card Feed */}
+      {/* Reports Feed */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-        {filtered.map((rep) => (
-          <div
-            key={rep.id}
-            className="glass-panel glass-panel-hover"
-            style={{ padding: '18px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px' }}
-          >
-            <div style={{ flex: 1 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
-                <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#ef4444' }}>
-                  ⚠️ {rep.aiCategory}
-                </span>
-                <span style={{ fontSize: '0.75rem', background: rep.aiSeverity >= 4 ? 'rgba(239,68,68,0.2)' : 'rgba(245,158,11,0.2)', color: rep.aiSeverity >= 4 ? '#ef4444' : '#f59e0b', padding: '2px 8px', borderRadius: '12px', fontWeight: 600 }}>
-                  Severity: {rep.aiSeverity}/5
-                </span>
-                {getStatusBadge(rep.status)}
-                <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>
-                  Location: <strong>{rep.destinationName}</strong>
-                </span>
-              </div>
-
-              <p style={{ fontSize: '0.9rem', color: '#f8fafc', margin: '0 0 6px 0' }}>
-                {rep.description}
-              </p>
-
-              <div style={{ display: 'flex', gap: '16px', fontSize: '0.75rem', color: '#94a3b8' }}>
-                <span>Reported by: <strong style={{ color: '#cbd5e1' }}>{rep.userName}</strong></span>
-                <span>AI Confidence: <strong style={{ color: '#10b981' }}>{(rep.aiConfidence * 100).toFixed(0)}%</strong></span>
-                {rep.adminNotes && (
-                  <span style={{ color: '#fbbf24' }}>Note: {rep.adminNotes}</span>
-                )}
-              </div>
-            </div>
-
-            <button
-              onClick={() => setSelectedReport(rep)}
-              className="btn-primary"
-              style={{ padding: '8px 18px', fontSize: '0.85rem' }}
-            >
-              Triage & Action
-            </button>
+        {filtered.length === 0 ? (
+          <div className="glass-panel" style={{ padding: '36px', textAlign: 'center', color: '#94a3b8' }}>
+            No reports match the selected filters.
           </div>
-        ))}
+        ) : (
+          filtered.map((rep) => (
+            <div
+              key={rep.id}
+              className="glass-panel glass-panel-hover"
+              style={{ padding: '18px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px' }}
+            >
+              <div style={{ flex: 1 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap', marginBottom: '8px' }}>
+                  <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#ef4444' }}>
+                    ⚠️ {rep.aiCategory}
+                  </span>
+                  <span style={{ fontSize: '0.75rem', background: rep.aiSeverity >= 4 ? 'rgba(239,68,68,0.2)' : 'rgba(245,158,11,0.2)', color: rep.aiSeverity >= 4 ? '#ef4444' : '#f59e0b', padding: '2px 8px', borderRadius: '12px', fontWeight: 600 }}>
+                    Severity: {rep.aiSeverity}/5
+                  </span>
+                  {getStatusBadge(rep.status)}
+                  <span style={{ fontSize: '0.75rem', color: '#94a3b8', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <MapPin size={13} color="#10b981" /> {rep.destinationName}
+                  </span>
+                  {rep.adminReviewed && (
+                    <span style={{ fontSize: '0.7rem', color: '#10b981', background: 'rgba(16,185,129,0.15)', padding: '2px 6px', borderRadius: '6px' }}>
+                      ✓ Officer Reviewed
+                    </span>
+                  )}
+                </div>
+
+                <p style={{ fontSize: '0.9rem', color: '#f8fafc', margin: '0 0 8px 0', lineHeight: '1.4' }}>
+                  {rep.description}
+                </p>
+
+                <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', fontSize: '0.75rem', color: '#94a3b8' }}>
+                  <span>Reported by: <strong style={{ color: '#cbd5e1' }}>{rep.userName || 'Citizen'}</strong></span>
+                  <span>AI Confidence: <strong style={{ color: '#10b981' }}>{(rep.aiConfidence * 100).toFixed(0)}%</strong></span>
+                  {rep.adminNotes && (
+                    <span style={{ color: '#fbbf24' }}>Note: {rep.adminNotes}</span>
+                  )}
+                </div>
+              </div>
+
+              <button
+                onClick={() => setInternalSelectedReport(rep)}
+                className="btn-primary"
+                style={{ padding: '8px 18px', fontSize: '0.85rem', flexShrink: 0 }}
+              >
+                <Eye size={14} /> Triage & Action
+              </button>
+            </div>
+          ))
+        )}
       </div>
 
-      {selectedReport && (
-        <TriageModal
-          report={selectedReport}
-          onClose={() => setSelectedReport(null)}
+      {activeModalReport && (
+        <ReportDetailModal
+          report={activeModalReport}
+          onClose={handleCloseModal}
           onUpdated={(updated) => {
             onReportUpdated(updated);
-            setSelectedReport(null);
+            handleCloseModal();
           }}
         />
       )}
